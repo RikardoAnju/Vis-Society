@@ -1,0 +1,39 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#053f5c" stroke-width="2" opacity="0.1"/>
+
+  <!-- Main geometric shape - interconnected nodes representing network -->
+  <g id="network">
+    <!-- Center circle -->
+    <circle cx="100" cy="100" r="18" fill="#053f5c"/>
+
+    <!-- Top circle -->
+    <circle cx="100" cy="45" r="14" fill="#053f5c" opacity="0.7"/>
+
+    <!-- Right circle -->
+    <circle cx="145" cy="85" r="14" fill="#053f5c" opacity="0.7"/>
+
+    <!-- Bottom Right circle -->
+    <circle cx="125" cy="145" r="14" fill="#053f5c" opacity="0.7"/>
+
+    <!-- Bottom Left circle -->
+    <circle cx="75" cy="145" r="14" fill="#053f5c" opacity="0.7"/>
+
+    <!-- Left circle -->
+    <circle cx="55" cy="85" r="14" fill="#053f5c" opacity="0.7"/>
+
+    <!-- Connection lines -->
+    <line x1="100" y1="100" x2="100" y2="45" stroke="#a5dded" stroke-width="2"/>
+    <line x1="100" y1="100" x2="145" y2="85" stroke="#a5dded" stroke-width="2"/>
+    <line x1="100" y1="100" x2="125" y2="145" stroke="#a5dded" stroke-width="2"/>
+    <line x1="100" y1="100" x2="75" y2="145" stroke="#a5dded" stroke-width="2"/>
+    <line x1="100" y1="100" x2="55" y2="85" stroke="#a5dded" stroke-width="2"/>
+
+    <!-- Optional: outer connections -->
+    <line x1="100" y1="45" x2="145" y2="85" stroke="#a5dded" stroke-width="1.5" opacity="0.5"/>
+    <line x1="145" y1="85" x2="125" y2="145" stroke="#a5dded" stroke-width="1.5" opacity="0.5"/>
+    <line x1="125" y1="145" x2="75" y2="145" stroke="#a5dded" stroke-width="1.5" opacity="0.5"/>
+    <line x1="75" y1="145" x2="55" y2="85" stroke="#a5dded" stroke-width="1.5" opacity="0.5"/>
+    <line x1="55" y1="85" x2="100" y2="45" stroke="#a5dded" stroke-width="1.5" opacity="0.5"/>
+  </g>
+</svg>
