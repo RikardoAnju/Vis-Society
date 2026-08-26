@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Vis Society - Building Tomorrow's Sustainable Future",
   description: "Vis Society: Connecting business leaders, professionals, and entrepreneurs across Batam, Singapore, and Malaysia",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

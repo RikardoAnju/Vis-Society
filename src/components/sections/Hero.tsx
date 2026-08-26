@@ -45,12 +45,8 @@ export default function HeroSection() {
                 </span>
               ))}
               <span
-                className="text-base sm:text-lg md:text-xl font-semibold italic opacity-0 px-3 py-1 rounded"
-                style={{
-                  animation: "fadeInUp 0.8s ease-out 0.8s forwards",
-                  color: "#ffffff",
-                  backgroundColor: colors.primary
-                }}
+                className="text-base sm:text-lg md:text-xl font-light italic text-white/80 opacity-0"
+                style={{ animation: "fadeInUp 0.8s ease-out 0.8s forwards" }}
               >
                 / Growth Mindset Community
               </span>
