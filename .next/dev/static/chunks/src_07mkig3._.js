@@ -308,7 +308,7 @@ function AboutSection() {
                     className: "grid md:grid-cols-3 gap-6 mb-12",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "p-8 rounded-xl bg-gray-50",
+                            className: "p-8 rounded-xl bg-gray-50 border border-transparent transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-xl hover:shadow-slate-200/50 hover:bg-white hover:border-slate-100",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                     className: "w-7 h-7 mb-5",
@@ -351,7 +351,7 @@ function AboutSection() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-gray-600 text-sm leading-relaxed",
-                                    children: "Membangun ekosistem lintas batas yang berkembang pesat, tempat pemimpin bisnis dan profesional dapat terhubung dan bertumbuh bersama."
+                                    children: "Untuk membangun ekosistem lintas batas yang berkembang pesat tempat para pemimpin bisnis, profesional, dan pengusaha dapat terhubung, bertumbuh, serta menciptakan dampak yang berkelanjutan di seluruh wilayah Batam, Singapura, dan Malaysia."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/About.tsx",
                                     lineNumber: 77,
@@ -364,7 +364,7 @@ function AboutSection() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "p-8 rounded-xl",
+                            className: "p-8 rounded-xl transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-xl hover:shadow-teal-950/20",
                             style: {
                                 backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$color$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["colors"].primary
                             },
@@ -416,17 +416,86 @@ function AboutSection() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                    className: "text-xl font-bold text-white mb-3",
+                                    className: "text-xl font-bold text-white mb-4",
                                     children: "Misi"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/About.tsx",
                                     lineNumber: 89,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-white/85 text-sm leading-relaxed",
-                                    children: "Menghadirkan jejaring, pertukaran pengetahuan, dan kolaborasi strategis yang berdampak dan berkelanjutan bagi anggota."
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                    className: "text-white/85 text-xs space-y-3.5",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                    className: "text-white block text-sm font-semibold mb-0.5",
+                                                    children: "Jejaring (Networking)"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/sections/About.tsx",
+                                                    lineNumber: 92,
+                                                    columnNumber: 17
+                                                }, this),
+                                                "Membangun jejaring sebagai wadah bagi para profesional dan pengusaha yang memiliki komitmen kuat untuk terus mengembangkan relasi."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/sections/About.tsx",
+                                            lineNumber: 91,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                    className: "text-white block text-sm font-semibold mb-0.5",
+                                                    children: "Pertukaran Pengetahuan (Knowledge Exchange)"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/sections/About.tsx",
+                                                    lineNumber: 96,
+                                                    columnNumber: 17
+                                                }, this),
+                                                "Menumbuhkan keinginan untuk berbagi ide, wawasan, dan pengalaman industri di dalam komunitas."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/sections/About.tsx",
+                                            lineNumber: 95,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                    className: "text-white block text-sm font-semibold mb-0.5",
+                                                    children: "Kolaborasi Strategis (Strategic Collaboration)"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/sections/About.tsx",
+                                                    lineNumber: 100,
+                                                    columnNumber: 17
+                                                }, this),
+                                                "Mendorong terciptanya kolaborasi sesama anggota dalam berbagai proyek, kemitraan, dan inisiatif bersama."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/sections/About.tsx",
+                                            lineNumber: 99,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                    className: "text-white block text-sm font-semibold mb-0.5",
+                                                    children: "Peluang Regional/Investasi (Regional Opportunities/Investment)"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/sections/About.tsx",
+                                                    lineNumber: 104,
+                                                    columnNumber: 17
+                                                }, this),
+                                                "Memperluas peluang profesional, bisnis, dan investasi lintas batas negara."
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/sections/About.tsx",
+                                            lineNumber: 103,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/src/components/sections/About.tsx",
                                     lineNumber: 90,
                                     columnNumber: 13
@@ -438,109 +507,71 @@ function AboutSection() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "p-8 rounded-xl bg-gray-50",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                    className: "w-7 h-7 mb-5",
-                                    fill: "none",
-                                    stroke: "black",
-                                    strokeWidth: "1.6",
-                                    viewBox: "0 0 24 24",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                        strokeLinecap: "round",
-                                        strokeLinejoin: "round",
-                                        d: "M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                            className: "p-8 rounded-xl bg-gray-50 flex flex-col justify-between border border-transparent transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-xl hover:shadow-slate-200/50 hover:bg-white hover:border-slate-100",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        className: "w-7 h-7 mb-5",
+                                        fill: "none",
+                                        stroke: "black",
+                                        strokeWidth: "1.6",
+                                        viewBox: "0 0 24 24",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            d: "M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/sections/About.tsx",
+                                            lineNumber: 114,
+                                            columnNumber: 17
+                                        }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/About.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 113,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                        className: "text-xl font-bold text-black mb-3",
+                                        children: "Core Values"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/sections/About.tsx",
+                                        lineNumber: 116,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-gray-600 text-sm leading-relaxed mb-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                children: "Filosofi Akuarium (Aquarium Philosophy)"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/sections/About.tsx",
+                                                lineNumber: 118,
+                                                columnNumber: 17
+                                            }, this),
+                                            " — sebuah ekosistem yang terkendali dan tepercaya di mana para profesional berinteraksi di dalam lingkungan yang terkurasi."
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/sections/About.tsx",
+                                        lineNumber: 117,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-gray-600 text-xs leading-relaxed",
+                                        children: "Pendekatan ini mendorong terciptanya rasa saling percaya, akuntabilitas, integritas profesional, dan kolaborasi jangka panjang, sekaligus menjaga kualitas serta keterikatan (*engagement*) yang bermakna di antara para anggota."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/sections/About.tsx",
+                                        lineNumber: 120,
                                         columnNumber: 15
                                     }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 97,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                    className: "text-xl font-bold text-black mb-3",
-                                    children: "Nilai-Nilai Kami"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 100,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                    className: "text-gray-600 text-sm space-y-2",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            className: "flex gap-2",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    style: {
-                                                        color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$color$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["colors"].primary
-                                                    },
-                                                    children: "•"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 103,
-                                                    columnNumber: 17
-                                                }, this),
-                                                "Integritas dalam setiap kolaborasi"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 102,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            className: "flex gap-2",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    style: {
-                                                        color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$color$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["colors"].primary
-                                                    },
-                                                    children: "•"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 107,
-                                                    columnNumber: 17
-                                                }, this),
-                                                "Kepedulian antar anggota"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 106,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            className: "flex gap-2",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    style: {
-                                                        color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$color$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["colors"].primary
-                                                    },
-                                                    children: "•"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 111,
-                                                    columnNumber: 17
-                                                }, this),
-                                                "Transparansi dan profesionalisme"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 110,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 101,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/sections/About.tsx",
+                                lineNumber: 112,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
                             fileName: "[project]/src/components/sections/About.tsx",
-                            lineNumber: 96,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, this)
                     ]
@@ -553,7 +584,7 @@ function AboutSection() {
                     className: "border-gray-200 mb-12"
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/About.tsx",
-                    lineNumber: 119,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -570,12 +601,12 @@ function AboutSection() {
                                         value: stat.value
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/About.tsx",
-                                        lineNumber: 126,
+                                        lineNumber: 135,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 134,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -583,18 +614,18 @@ function AboutSection() {
                                     children: stat.label
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 137,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, stat.label, true, {
                             fileName: "[project]/src/components/sections/About.tsx",
-                            lineNumber: 124,
+                            lineNumber: 133,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/About.tsx",
-                    lineNumber: 122,
+                    lineNumber: 131,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -611,7 +642,7 @@ function AboutSection() {
                                     children: "Struktur Organisasi"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 136,
+                                    lineNumber: 145,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -619,7 +650,7 @@ function AboutSection() {
                                     children: "Susunan Dewan Pengurus Vis Society"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 148,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -627,7 +658,7 @@ function AboutSection() {
                                     children: "Struktur kepengurusan harian yang berdedikasi untuk menghubungkan dan memfasilitasi kolaborasi bisnis lintas batas."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 151,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -651,7 +682,7 @@ function AboutSection() {
                                                     d: "M2.036 12.322a1.012 1.012 0 010-.644C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.437 0 .644C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 151,
+                                                    lineNumber: 160,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -660,26 +691,26 @@ function AboutSection() {
                                                     d: "M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 152,
+                                                    lineNumber: 161,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 150,
+                                            lineNumber: 159,
                                             columnNumber: 15
                                         }, this),
                                         "Lihat Bagan Gambar Asli"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 154,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/sections/About.tsx",
-                            lineNumber: 135,
+                            lineNumber: 144,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -689,7 +720,7 @@ function AboutSection() {
                                     className: "flex flex-col items-center",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-white p-5 rounded-2xl shadow-lg w-64 text-center transition-transform hover:scale-[1.02] duration-300",
+                                            className: "text-white p-5 rounded-2xl shadow-lg w-64 md:w-64 text-center transition-transform hover:scale-[1.02] duration-300",
                                             style: {
                                                 backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$color$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["colors"].primary
                                             },
@@ -699,7 +730,7 @@ function AboutSection() {
                                                     children: "Enrico Moreno"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 167,
+                                                    lineNumber: 176,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -707,24 +738,110 @@ function AboutSection() {
                                                     children: "Ketua Umum"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 168,
+                                                    lineNumber: 177,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 163,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-0.5 h-8 bg-slate-200"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/sections/About.tsx",
                                             lineNumber: 172,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-white p-5 rounded-2xl shadow-lg w-64 text-center transition-transform hover:scale-[1.02] duration-300",
+                                            className: "w-0.5 h-6 bg-slate-200"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/sections/About.tsx",
+                                            lineNumber: 181,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex flex-col items-center relative",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex gap-4 md:gap-6 flex-wrap justify-center items-center flex-col md:flex-row",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "text-white p-4 rounded-2xl shadow-lg w-64 md:w-52 text-center transition-transform hover:scale-[1.02] duration-300",
+                                                        style: {
+                                                            backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$color$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["colors"].primary
+                                                        },
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "font-bold text-sm",
+                                                                children: "Muga Prasada Bhakti"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/sections/About.tsx",
+                                                                lineNumber: 190,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-[10px] opacity-80 mt-1 uppercase tracking-wide",
+                                                                children: "Co Founder"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/sections/About.tsx",
+                                                                lineNumber: 191,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/components/sections/About.tsx",
+                                                        lineNumber: 186,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "w-0.5 h-4 bg-slate-200 md:hidden"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/sections/About.tsx",
+                                                        lineNumber: 195,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "text-white p-4 rounded-2xl shadow-lg w-64 md:w-52 text-center transition-transform hover:scale-[1.02] duration-300",
+                                                        style: {
+                                                            backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$color$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["colors"].primary
+                                                        },
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "font-bold text-sm",
+                                                                children: "Y Seno Prakoso"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/sections/About.tsx",
+                                                                lineNumber: 201,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                className: "text-[10px] opacity-80 mt-1 uppercase tracking-wide",
+                                                                children: "Co Founder"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/sections/About.tsx",
+                                                                lineNumber: 202,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/components/sections/About.tsx",
+                                                        lineNumber: 197,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/sections/About.tsx",
+                                                lineNumber: 185,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/sections/About.tsx",
+                                            lineNumber: 184,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "w-0.5 h-6 bg-slate-200"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/sections/About.tsx",
+                                            lineNumber: 208,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "text-white p-5 rounded-2xl shadow-lg w-64 md:w-64 text-center transition-transform hover:scale-[1.02] duration-300",
                                             style: {
                                                 backgroundColor: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$color$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["colors"].primary
                                             },
@@ -734,34 +851,34 @@ function AboutSection() {
                                                     children: "Antonius Marco Lombardo"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 179,
+                                                    lineNumber: 215,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     className: "text-xs opacity-80 mt-1 uppercase tracking-wide",
-                                                    children: "Ketua Umum"
+                                                    children: "Ketua Harian"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 180,
+                                                    lineNumber: 216,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 175,
+                                            lineNumber: 211,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "w-0.5 h-8 bg-slate-200"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 184,
+                                            lineNumber: 220,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 161,
+                                    lineNumber: 170,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -771,19 +888,19 @@ function AboutSection() {
                                             className: "absolute top-0 left-[10%] right-[10%] h-0.5 bg-slate-200 hidden md:block"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 226,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 relative",
+                                            className: "grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 justify-items-center relative",
                                             children: ORG_DEPARTMENTS.map((dept, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex flex-col items-center",
+                                                    className: "p-5 bg-slate-50/50 rounded-2xl border border-slate-100/80 md:bg-transparent md:border-0 md:p-0 w-full max-w-[290px] md:max-w-none flex flex-col items-center",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: "w-0.5 h-6 bg-slate-200 hidden md:block"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/sections/About.tsx",
-                                                            lineNumber: 196,
+                                                            lineNumber: 232,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -791,7 +908,7 @@ function AboutSection() {
                                                             children: dept.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/sections/About.tsx",
-                                                            lineNumber: 199,
+                                                            lineNumber: 235,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -805,7 +922,7 @@ function AboutSection() {
                                                                     children: dept.head.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                                    lineNumber: 208,
+                                                                    lineNumber: 244,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -813,13 +930,13 @@ function AboutSection() {
                                                                     children: dept.head.role
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                                    lineNumber: 209,
+                                                                    lineNumber: 245,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/sections/About.tsx",
-                                                            lineNumber: 204,
+                                                            lineNumber: 240,
                                                             columnNumber: 21
                                                         }, this),
                                                         dept.staff.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -831,18 +948,18 @@ function AboutSection() {
                                                                             className: "w-0.5 h-4 bg-slate-200"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/sections/About.tsx",
-                                                                            lineNumber: 218,
+                                                                            lineNumber: 254,
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                            className: "bg-slate-50 border border-slate-200 text-slate-800 p-3 rounded-lg shadow-sm w-full max-w-[170px] text-center hover:bg-slate-100/70 transition-colors duration-200",
+                                                                            className: "bg-white border border-slate-200 text-slate-800 p-3 rounded-lg shadow-sm w-full max-w-[170px] text-center hover:bg-slate-50 transition-colors duration-200",
                                                                             children: [
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                                                     className: "font-semibold text-xs text-slate-800",
                                                                                     children: staff.name
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                                                    lineNumber: 222,
+                                                                                    lineNumber: 258,
                                                                                     columnNumber: 31
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -850,53 +967,145 @@ function AboutSection() {
                                                                                     children: staff.role
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                                                    lineNumber: 223,
+                                                                                    lineNumber: 259,
                                                                                     columnNumber: 31
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/components/sections/About.tsx",
-                                                                            lineNumber: 221,
+                                                                            lineNumber: 257,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     ]
                                                                 }, staff.name, true, {
                                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                                    lineNumber: 216,
+                                                                    lineNumber: 252,
                                                                     columnNumber: 27
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/sections/About.tsx",
-                                                            lineNumber: 214,
+                                                            lineNumber: 250,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, idx, true, {
                                                     fileName: "[project]/src/components/sections/About.tsx",
-                                                    lineNumber: 194,
+                                                    lineNumber: 230,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 192,
+                                            lineNumber: 228,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 224,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/sections/About.tsx",
-                            lineNumber: 159,
+                            lineNumber: 168,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/sections/About.tsx",
-                    lineNumber: 134,
+                    lineNumber: 143,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mt-24 border-t border-gray-100 pt-16",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "text-center mb-10",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                    className: "text-xs font-bold tracking-widest uppercase mb-4",
+                                    style: {
+                                        color: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$color$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["colors"].primary
+                                    },
+                                    children: "Kemitraan Strategis"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/sections/About.tsx",
+                                    lineNumber: 275,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-black mb-4",
+                                    children: "Kolaborasi & Aliansi Internasional"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/sections/About.tsx",
+                                    lineNumber: 278,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-base text-gray-600 max-w-2xl mx-auto",
+                                    children: "Vis Society aktif membangun kemitraan lintas batas di Singapura, Korea Selatan, dan kawasan Asia guna memperluas jangkauan jaringan bisnis anggota."
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/sections/About.tsx",
+                                    lineNumber: 281,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/sections/About.tsx",
+                            lineNumber: 274,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center justify-center gap-4 md:gap-16 mt-8",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "group flex items-center justify-center p-3 md:p-6 bg-slate-50/50 rounded-2xl border border-slate-100 hover:border-slate-200 transition-all duration-300 w-36 h-20 md:w-52 md:h-28 hover:bg-white hover:shadow-lg hover:shadow-slate-200/50",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        src: "/img/aiving.webp",
+                                        alt: "Aiving Partner Logo",
+                                        width: 120,
+                                        height: 120,
+                                        className: "max-h-12 md:max-h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105",
+                                        priority: true
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/sections/About.tsx",
+                                        lineNumber: 289,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/sections/About.tsx",
+                                    lineNumber: 288,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "group flex items-center justify-center p-3 md:p-6 bg-slate-50/50 rounded-2xl border border-slate-100 hover:border-slate-200 transition-all duration-300 w-36 h-20 md:w-52 md:h-28 hover:bg-white hover:shadow-lg hover:shadow-slate-200/50",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        src: "/img/match-advisory.webp",
+                                        alt: "Match Advisory Partner Logo",
+                                        width: 120,
+                                        height: 120,
+                                        className: "max-h-14 md:max-h-20 w-auto object-contain transition-all duration-300 group-hover:scale-105",
+                                        priority: true
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/sections/About.tsx",
+                                        lineNumber: 301,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/sections/About.tsx",
+                                    lineNumber: 300,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/sections/About.tsx",
+                            lineNumber: 286,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/sections/About.tsx",
+                    lineNumber: 273,
                     columnNumber: 9
                 }, this),
                 showModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -914,7 +1123,7 @@ function AboutSection() {
                                         children: "Bagan Struktur Organisasi"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/About.tsx",
-                                        lineNumber: 247,
+                                        lineNumber: 324,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -932,52 +1141,52 @@ function AboutSection() {
                                                 d: "M6 18L18 6M6 6l12 12"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/sections/About.tsx",
-                                                lineNumber: 253,
+                                                lineNumber: 330,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/About.tsx",
-                                            lineNumber: 252,
+                                            lineNumber: 329,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/sections/About.tsx",
-                                        lineNumber: 248,
+                                        lineNumber: 325,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/sections/About.tsx",
-                                lineNumber: 246,
+                                lineNumber: 323,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "relative flex-1 overflow-auto p-4 flex justify-center items-center bg-slate-50 min-h-[300px]",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "/img/struktur-organisasi.jpg",
+                                    src: "/img/struktur-organisasi-v2.jpg",
                                     alt: "Bagan Struktur Organisasi Vis Society",
                                     width: 1200,
                                     height: 750,
                                     className: "max-w-full max-h-[70vh] object-contain rounded-lg border border-slate-200"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/About.tsx",
-                                    lineNumber: 258,
+                                    lineNumber: 335,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/sections/About.tsx",
-                                lineNumber: 257,
+                                lineNumber: 334,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/sections/About.tsx",
-                        lineNumber: 242,
+                        lineNumber: 319,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/sections/About.tsx",
-                    lineNumber: 238,
+                    lineNumber: 315,
                     columnNumber: 11
                 }, this)
             ]
@@ -2324,6 +2533,18 @@ const MISSION_POINTS = [
 ];
 const FAQ_ITEMS = [
     {
+        question: "Apa manfaat bergabung Vis Society?",
+        answer: "Jika Anda adalah individu yang memiliki mindset terus bertumbuh, khususnya dengan cara:\n\na. Suka melakukan networking\nb. Suka bertukar wawasan dan mengembangkan cakrawala Anda\nc. Atau mencari peluang untuk ekspansi bisnis Anda ke depan,\n\nMaka Vis adalah organisasi yang akan mencoba untuk terus mengakomodir kebutuhan Anda untuk bertumbuh tersebut."
+    },
+    {
+        question: "Apa yang membedakan Vis Society dari organisasi lainnya?",
+        answer: "a. Umumnya sebuah organisasi jarang konsisten dalam menjalankan visi, misi, dan programnya. Tetapi di Vis, sejak berdiri selalu berusaha konsisten menjalankan Visi, Misi, dan Programnya, dengan tetap menyesuaikan kondisi di lapangan.\n\nb. Vis Society memiliki filosofi Aquarium, yang artinya untuk sebuah organisasi dapat konsisten menjalankan Visi, Misi, dan programnya, maka organisasi tersebut harus dibangun dengan aturan main yang mampu mendukung menjadi sebuah ekosistem."
+    },
+    {
+        question: "Type Membership apa yang cocok buat saya?",
+        answer: "Sepanjang Anda punya mindset untuk bertumbuh dalam networking, memperluas wawasan, dan keinginan ekspansi ke depan, maka semua jenis membership cocok untuk Anda, dan bisa Anda pilih sesuai kebutuhan dan kondisi Anda."
+    },
+    {
         question: "Apakah Vis hanya ada di Batam?",
         answer: "Ya, saat ini Vis masih ada di Batam saja. Tetapi Vis sudah mulai membangun kemitraan dan MOU dengan organisasi di Singapore dan Korea. Ke depan, Vis akan terus mencoba bertumbuh dan ekspansi baik dengan organisasi di negara tetangga, maupun di seluruh Indonesia."
     },
@@ -2333,7 +2554,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "Apakah Member Vis punya kewajiban atau tugas?",
-        answer: "Tugas hanya akan ada bagi para pengurus harian Vis Society saja. Sedangkan untuk anggota Vis disarankan untuk selalu membawa relasi baru di setiap pertemuan networking bulanan yang dihadirinya, sebagaimana yang disebutkan pada pertanyaan sebelumnya (anggota diperbolehkan mengajak satu relasi berbeda setiap bulan)."
+        answer: "Tugas hanya akan ada bagi para pengurus harian Vis Society saja. Sedangkan untuk anggota Vis disarankan untuk selalu membawa relasi baru di setiap pertemuan networking bulanan yang dihadirinya, sebagaimana yang disebutkan pada FAQ no. 5."
     }
 ];
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {

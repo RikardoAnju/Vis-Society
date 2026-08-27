@@ -3,87 +3,106 @@
 import type { CSSProperties } from "react";
 import { useState } from "react";
 import { colors } from "@lib/color";
-
-const MEMBERSHIP_PLANS = [
-  {
-    name: "Personal Membership",
-    shortName: "Personal",
-    fee: "IDR 750,000",
-    validity: "1 year",
-    description: "Untuk profesional, founder, dan individu yang ingin aktif membangun jejaring lintas batas.",
-    audience: "Best for professionals",
-    cta: "Join as Personal",
-    accent: "#a5dded",
-  },
-  {
-    name: "Corporate Membership",
-    shortName: "Corporate",
-    fee: "IDR 5,000,000",
-    validity: "1 year",
-    description: "Untuk perusahaan yang ingin memperluas eksposur, koneksi bisnis, dan peluang kolaborasi.",
-    audience: "Best for companies",
-    cta: "Join as Corporate",
-    featured: true,
-    accent: "#053f5c",
-  },
-  {
-    name: "Sponsor Membership",
-    shortName: "Sponsor",
-    fee: "Based on sponsorship opportunity",
-    validity: "1 year",
-    description: "Untuk brand atau partner yang ingin mendukung kegiatan VIS Society secara strategis.",
-    audience: "Best for brand partners",
-    cta: "Discuss Sponsorship",
-    accent: "#e6f7fb",
-  },
-];
-
-const MEMBERSHIP_BENEFITS = [
-  {
-    benefit: "Member Visibility",
-    value: "Profile exposure through VIS media",
-    type: "All Membership Types",
-    note: "Tampil lebih sering di kanal komunitas.",
-  },
-  {
-    benefit: "Transparency",
-    value: "Access to financial & membership reports",
-    type: "All Membership Types",
-    note: "Akses informasi komunitas yang lebih terbuka.",
-  },
-  {
-    benefit: "Business Intelligence",
-    value: "Access to business opportunities & promotional information",
-    type: "All Membership Types",
-    note: "Insight peluang dan promosi yang relevan.",
-  },
-  {
-    benefit: "Networking Access",
-    value: "Free access to VIS monthly meetings",
-    type: "All Membership Types",
-    note: "Masuk ke ruang temu rutin VIS Society.",
-  },
-  {
-    benefit: "Corporate Exposure",
-    value: "Opportunities to promote products/services during selected VIS activities",
-    type: "Corporate Membership",
-    note: "Benefit eksklusif untuk meningkatkan exposure bisnis.",
-    featured: true,
-  },
-];
-
-const PLAN_HIGHLIGHTS = [
-  "Monthly meeting access",
-  "Cross-border network",
-  "Business opportunity updates",
-];
+import { useLanguage } from "@lib/LanguageContext";
 
 const Y_OFFSETS = [0, 80, 135];
 
 export default function MembershipSection() {
   const [activePlan, setActivePlan] = useState(1);
-  const selectedPlan = MEMBERSHIP_PLANS[activePlan];
   const [activeBenefit, setActiveBenefit] = useState(0);
+  const { t, language } = useLanguage();
+
+  const MEMBERSHIP_PLANS = [
+    {
+      name: "Personal Membership",
+      shortName: "Personal",
+      fee: "IDR 750,000",
+      validity: language === "id" ? "1 Tahun" : "1 year",
+      description: language === "id" 
+        ? "Untuk profesional, founder, dan individu yang ingin aktif membangun jejaring lintas batas." 
+        : "For professionals, founders, and individuals who want to actively build cross-border networks.",
+      audience: language === "id" ? "Cocok untuk profesional" : "Best for professionals",
+      cta: language === "id" ? "Gabung Personal" : "Join as Personal",
+      accent: "#a5dded",
+    },
+    {
+      name: "Corporate Membership",
+      shortName: "Corporate",
+      fee: "IDR 5,000,000",
+      validity: language === "id" ? "1 Tahun" : "1 year",
+      description: language === "id" 
+        ? "Untuk perusahaan yang ingin memperluas eksposur, koneksi bisnis, dan peluang kolaborasi." 
+        : "For companies wanting to expand exposure, business connections, and collaboration opportunities.",
+      audience: language === "id" ? "Cocok untuk bisnis" : "Best for companies",
+      cta: language === "id" ? "Gabung Corporate" : "Join as Corporate",
+      featured: true,
+      accent: "#053f5c",
+    },
+    {
+      name: "Sponsor Membership",
+      shortName: "Sponsor",
+      fee: language === "id" ? "Berdasarkan peluang sponsor" : "Based on sponsorship",
+      validity: language === "id" ? "1 Tahun" : "1 year",
+      description: language === "id" 
+        ? "Untuk brand atau partner yang ingin mendukung kegiatan VIS Society secara strategis." 
+        : "For brands or partners wanting to strategically support VIS Society activities.",
+      audience: language === "id" ? "Cocok untuk partner brand" : "Best for brand partners",
+      cta: language === "id" ? "Hubungi Sponsor" : "Discuss Sponsorship",
+      accent: "#e6f7fb",
+    },
+  ];
+
+  const MEMBERSHIP_BENEFITS = [
+    {
+      benefit: language === "id" ? "Eksposur Profil" : "Member Visibility",
+      value: language === "id" 
+        ? "Eksposur profil melalui media komunikasi VIS" 
+        : "Profile exposure through VIS communication media",
+      type: language === "id" ? "Semua Tipe Membership" : "All Membership Types",
+      note: language === "id" ? "Tampil lebih sering di kanal komunitas." : "Appear more frequently in community channels.",
+    },
+    {
+      benefit: language === "id" ? "Transparansi" : "Transparency",
+      value: language === "id" 
+        ? "Akses ke laporan keuangan & data keanggotaan" 
+        : "Access to financial & membership reports",
+      type: language === "id" ? "Semua Tipe Membership" : "All Membership Types",
+      note: language === "id" ? "Akses informasi komunitas yang lebih terbuka." : "More open access to community information.",
+    },
+    {
+      benefit: language === "id" ? "Informasi Bisnis" : "Business Intelligence",
+      value: language === "id" 
+        ? "Akses ke peluang bisnis & informasi promosi" 
+        : "Access to business opportunities & promotional info",
+      type: language === "id" ? "Semua Tipe Membership" : "All Membership Types",
+      note: language === "id" ? "Insight peluang dan promosi yang relevan." : "Relevant insights on opportunities and promotions.",
+    },
+    {
+      benefit: language === "id" ? "Akses Jejaring" : "Networking Access",
+      value: language === "id" 
+        ? "Akses gratis ke pertemuan bulanan VIS" 
+        : "Free access to VIS monthly meetings",
+      type: language === "id" ? "Semua Tipe Membership" : "All Membership Types",
+      note: language === "id" ? "Masuk ke ruang temu rutin VIS Society." : "Enter regular VIS Society meeting rooms.",
+    },
+    {
+      benefit: language === "id" ? "Eksposur Perusahaan" : "Corporate Exposure",
+      value: language === "id" 
+        ? "Peluang promosi produk/layanan selama kegiatan VIS terpilih" 
+        : "Opportunities to promote products/services during selected VIS activities",
+      type: language === "id" ? "Corporate Membership" : "Corporate Membership",
+      note: language === "id" ? "Benefit eksklusif untuk meningkatkan exposure bisnis." : "Exclusive benefit to increase business exposure.",
+      featured: true,
+    },
+  ];
+
+  const PLAN_HIGHLIGHTS = [
+    language === "id" ? "Akses pertemuan bulanan" : "Monthly meeting access",
+    language === "id" ? "Jejaring lintas batas" : "Cross-border network",
+    language === "id" ? "Update peluang bisnis" : "Business opportunity updates",
+  ];
+
+  const selectedPlan = MEMBERSHIP_PLANS[activePlan];
 
   const nextBenefit = () => {
     setActiveBenefit((prev) => (prev + 1) % MEMBERSHIP_BENEFITS.length);
@@ -99,26 +118,26 @@ export default function MembershipSection() {
         <div className="grid lg:grid-cols-[0.82fr_1.18fr] gap-8 md:gap-12 mb-12">
           <div className="lg:pt-6">
             <h2 className="text-xs font-bold tracking-widest uppercase mb-4 inline-flex rounded-full px-4 py-2 bg-white border border-slate-200" style={{ color: colors.primary }}>
-              VIS Society Membership
+              {t("membership.label")}
             </h2>
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-black mb-5">
-              Buka akses ke network, exposure, dan peluang bisnis lintas batas.
+              {t("membership.heading")}
             </h3>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              Pilih membership yang paling pas untuk targetmu. Setiap paket berlaku satu tahun dan dirancang untuk membuat koneksi bisnis lebih mudah berubah menjadi kolaborasi nyata.
+              {t("membership.desc")}
             </p>
             <div className="mt-7 grid grid-cols-3 gap-3 max-w-lg">
               <div className="rounded-xl bg-white p-4 border border-slate-200">
                 <p className="text-2xl font-bold" style={{ color: colors.primary }}>47+</p>
-                <p className="text-xs text-gray-500">Anggota</p>
+                <p className="text-xs text-gray-500">{t("membership.stats.members")}</p>
               </div>
               <div className="rounded-xl bg-white p-4 border border-slate-200">
                 <p className="text-2xl font-bold" style={{ color: colors.primary }}>3</p>
-                <p className="text-xs text-gray-500">Negara</p>
+                <p className="text-xs text-gray-500">{t("membership.stats.countries")}</p>
               </div>
               <div className="rounded-xl bg-white p-4 border border-slate-200">
                 <p className="text-2xl font-bold" style={{ color: colors.primary }}>1 year</p>
-                <p className="text-xs text-gray-500">Validity</p>
+                <p className="text-xs text-gray-500">{t("membership.stats.validity")}</p>
               </div>
             </div>
           </div>
@@ -185,7 +204,7 @@ export default function MembershipSection() {
                       <span
                         className={`rounded-full px-3 py-1 text-xs font-semibold ${isActive ? "bg-white/15 text-white" : "text-gray-500"}`}
                       >
-                        {isActive ? "Selected" : "View"}
+                        {isActive ? (language === "id" ? "Terpilih" : "Selected") : (language === "id" ? "Lihat" : "View")}
                       </span>
                     </div>
 
@@ -198,7 +217,7 @@ export default function MembershipSection() {
                       </p>
                       {isActive && (
                         <p className="mt-5 text-sm font-bold text-white">
-                          Tap to explore benefits
+                          {language === "id" ? "Ketuk untuk melihat benefit" : "Tap to explore benefits"}
                         </p>
                       )}
                     </div>
@@ -213,7 +232,7 @@ export default function MembershipSection() {
             >
               <div>
                 <p className="text-xs md:text-sm font-bold uppercase tracking-widest mb-3" style={{ color: colors.primary }}>
-                  Selected Membership
+                  {t("membership.selectedLabel")}
                 </p>
                 <h4 className="text-2xl md:text-2xl font-bold text-black mb-4">{selectedPlan.name}</h4>
                 <p className="text-3xl md:text-3xl font-bold text-black mb-5 leading-tight">{selectedPlan.fee}</p>
@@ -247,7 +266,7 @@ export default function MembershipSection() {
                     className="text-xs font-bold uppercase tracking-widest mb-1"
                     style={{ color: selectedPlan.featured ? "#ffffff" : colors.primary }}
                   >
-                    Validity
+                    {t("membership.stats.validity")}
                   </p>
                   <p className={`text-lg font-bold ${selectedPlan.featured ? "text-white" : "text-black"}`}>
                     {selectedPlan.validity}
@@ -255,7 +274,7 @@ export default function MembershipSection() {
                 </div>
                 <a
                   href="https://wa.me/628217601818"
-                  className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90"
+                  className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90 cursor-pointer"
                   style={{ backgroundColor: colors.primary }}
                 >
                   {selectedPlan.cta}
@@ -268,10 +287,10 @@ export default function MembershipSection() {
         <div className="bg-transparent border-transparent shadow-none md:bg-white md:rounded-2xl md:border md:border-gray-200 p-0 md:p-8 md:shadow-sm">
           <div className="max-w-3xl mb-4 md:mb-8">
             <div className="flex items-center justify-between gap-4 mb-2">
-              <h4 className="text-xl md:text-2xl font-bold text-black">Benefit Membership</h4>
+              <h4 className="text-xl md:text-2xl font-bold text-black">{t("membership.benefitTitle")}</h4>
             </div>
             <p className="text-sm md:text-base text-gray-600 leading-relaxed hidden sm:block">
-              Benefit utama yang membuat membership ini bernilai untuk relasi, eksposur, dan insight bisnis.
+              {t("membership.benefitDesc")}
             </p>
           </div>
 
@@ -293,7 +312,7 @@ export default function MembershipSection() {
                           backgroundColor: item.featured ? colors.primary : "#f8fafc",
                         }}
                       >
-                        {item.featured ? "Corporate" : "Included"}
+                        {item.featured ? "Corporate" : (language === "id" ? "Termasuk" : "Included")}
                       </span>
                     </div>
                     <p className="text-sm text-gray-600 leading-relaxed mb-4">{item.value}</p>
@@ -310,7 +329,7 @@ export default function MembershipSection() {
               <button
                 type="button"
                 onClick={prevBenefit}
-                className="h-8 w-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-100 shadow-sm transition-all focus:outline-none"
+                className="h-8 w-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-100 shadow-sm transition-all focus:outline-none cursor-pointer"
                 aria-label="Previous benefit"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -338,7 +357,7 @@ export default function MembershipSection() {
               <button
                 type="button"
                 onClick={nextBenefit}
-                className="h-8 w-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-100 shadow-sm transition-all focus:outline-none"
+                className="h-8 w-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-100 shadow-sm transition-all focus:outline-none cursor-pointer"
                 aria-label="Next benefit"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -360,7 +379,7 @@ export default function MembershipSection() {
                       item.featured ? "bg-white text-[#053f5c]" : "bg-[#f8fafc] text-slate-500"
                     }`}
                   >
-                    {item.featured ? "Corporate" : "Included"}
+                    {item.featured ? "Corporate" : (language === "id" ? "Termasuk" : "Included")}
                   </span>
                 </div>
 

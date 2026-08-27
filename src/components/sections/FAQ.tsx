@@ -2,14 +2,24 @@
 
 import { useState } from "react";
 import { colors } from "@lib/color";
-import { FAQ_ITEMS } from "@constants/index";
+import { useLanguage } from "@lib/LanguageContext";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t } = useLanguage();
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  const FAQ_ITEMS = [
+    { question: t("faq.q1.q"), answer: t("faq.q1.a") },
+    { question: t("faq.q2.q"), answer: t("faq.q2.a") },
+    { question: t("faq.q3.q"), answer: t("faq.q3.a") },
+    { question: t("faq.q4.q"), answer: t("faq.q4.a") },
+    { question: t("faq.q5.q"), answer: t("faq.q5.a") },
+    { question: t("faq.q6.q"), answer: t("faq.q6.a") },
+  ];
 
   return (
     <section id="faq" className="py-16 md:py-24 px-4 md:px-8 bg-white border-t border-gray-100">
@@ -20,13 +30,13 @@ export default function FAQSection() {
             className="text-xs font-bold tracking-widest uppercase mb-3 inline-flex rounded-full px-4 py-2 bg-slate-50 border border-slate-200"
             style={{ color: colors.primary }}
           >
-            FAQ
+            {t("faq.label")}
           </h2>
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4">
-            Pertanyaan yang Sering Diajukan
+            {t("faq.heading")}
           </h3>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Temukan jawaban atas pertanyaan umum seputar keanggotaan, pertemuan, dan perkembangan jejaring kemitraan Vis Society.
+            {t("faq.desc")}
           </p>
         </div>
 
