@@ -4,7 +4,7 @@ import Image from "next/image";
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 import ScrollReveal from "@components/ui/ScrollReveal";
-import { PROGRAMS } from "@constants/sections";
+import { PROGRAMS } from "@constants/programs";
 
 export default function ProgramsSection() {
   const { t } = useLanguage();
@@ -44,7 +44,8 @@ export default function ProgramsSection() {
                   src={prog.image}
                   alt={prog.alt}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  unoptimized
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 420px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   priority={idx === 0}
                 />

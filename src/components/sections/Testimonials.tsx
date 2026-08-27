@@ -3,7 +3,7 @@
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 import ScrollReveal from "@components/ui/ScrollReveal";
-import { TESTIMONIALS } from "@constants/sections";
+import { TESTIMONIALS } from "@constants/testimonials";
 
 export default function TestimonialsSection() {
   const { t } = useLanguage();

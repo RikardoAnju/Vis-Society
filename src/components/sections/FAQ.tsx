@@ -4,7 +4,7 @@ import { useState } from "react";
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 import ScrollReveal from "@components/ui/ScrollReveal";
-import { FAQ_ITEMS } from "@constants/sections";
+import { FAQ_ITEMS } from "@constants/faq";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
