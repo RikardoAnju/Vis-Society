@@ -4,6 +4,7 @@ import { useState } from "react";
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 import ScrollReveal from "@components/ui/ScrollReveal";
+import { FAQ_ITEMS } from "@constants/sections";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -12,15 +13,6 @@ export default function FAQSection() {
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
-  const FAQ_ITEMS = [
-    { question: t("faq.q1.q"), answer: t("faq.q1.a") },
-    { question: t("faq.q2.q"), answer: t("faq.q2.a") },
-    { question: t("faq.q3.q"), answer: t("faq.q3.a") },
-    { question: t("faq.q4.q"), answer: t("faq.q4.a") },
-    { question: t("faq.q5.q"), answer: t("faq.q5.a") },
-    { question: t("faq.q6.q"), answer: t("faq.q6.a") },
-  ];
 
   return (
     <section id="faq" className="py-16 md:py-24 px-4 md:px-8 bg-white border-t border-gray-100">
@@ -67,7 +59,7 @@ export default function FAQSection() {
                     className="font-bold text-base md:text-lg transition-colors duration-300"
                     style={{ color: isOpen ? colors.primary : "#1e293b" }}
                   >
-                    {item.question}
+                    {t(item.questionKey)}
                   </span>
                   <span
                     className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300"
@@ -105,7 +97,7 @@ export default function FAQSection() {
                       className="p-5 md:p-6 pt-0 md:pt-0 border-t text-sm md:text-base leading-relaxed text-gray-600"
                       style={{ borderColor: "#f1f5f9" }}
                     >
-                      <p className="whitespace-pre-line">{item.answer}</p>
+                      <p className="whitespace-pre-line">{t(item.answerKey)}</p>
                     </div>
                   </div>
                 </div>

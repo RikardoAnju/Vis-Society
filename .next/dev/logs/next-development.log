@@ -330,3 +330,44 @@
 {"timestamp":"05:20:13.700","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
 {"timestamp":"05:20:13.743","source":"Browser","level":"WARN","message":"Image with src \"/img/vis_logo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
 {"timestamp":"05:20:13.744","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"/img/vis_logo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"05:28:36.352","source":"Server","level":"LOG","message":"✓ Compiled in 32ms"}
+{"timestamp":"05:28:40.312","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}
+{"timestamp":"05:28:46.101","source":"Server","level":"LOG","message":"✓ Compiled in 25ms"}
+{"timestamp":"05:28:50.545","source":"Server","level":"LOG","message":"✓ Compiled in 19ms"}
+{"timestamp":"05:29:04.178","source":"Server","level":"LOG","message":"✓ Compiled in 26ms"}
+{"timestamp":"05:29:08.529","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}
+{"timestamp":"05:29:12.618","source":"Server","level":"LOG","message":"✓ Compiled in 20ms"}
+{"timestamp":"05:29:34.571","source":"Server","level":"LOG","message":"✓ Compiled in 31ms"}
+{"timestamp":"05:29:46.231","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
+{"timestamp":"05:29:49.014","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}
+{"timestamp":"05:29:51.985","source":"Server","level":"LOG","message":"✓ Compiled in 21ms"}
+{"timestamp":"05:30:05.070","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"05:30:09.313","source":"Browser","level":"WARN","message":"Image with src \"/img/vis_logo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"05:30:09.313","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"/img/vis_logo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"05:31:06.828","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"05:31:06.861","source":"Browser","level":"WARN","message":"Image with src \"/img/vis_logo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"05:31:06.861","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"/img/vis_logo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"05:34:42.163","source":"Browser","level":"ERROR","message":"Uncaught ReferenceError: ARTICLES is not defined\n    at BlogSection (src/components/sections/Blog.tsx:33:12)\n    at Home (src/app/page.tsx:28:7)\n  \u001b[90m31 |\u001b[0m         {\u001b[90m/* Articles Grid */\u001b[0m}\n  \u001b[90m32 |\u001b[0m         <div className=\u001b[32m\"grid md:grid-cols-3 gap-8\"\u001b[0m>\n\u001b[31m\u001b[1m>\u001b[0m \u001b[90m33 |\u001b[0m           {\u001b[33mARTICLES\u001b[0m.map((article, idx) => (\n  \u001b[90m   |\u001b[0m            \u001b[31m\u001b[1m^\u001b[0m\n  \u001b[90m34 |\u001b[0m             <\u001b[33mScrollReveal\u001b[0m\n  \u001b[90m35 |\u001b[0m               key={idx}\n  \u001b[90m36 |\u001b[0m               \u001b[36mas\u001b[0m=\u001b[32m\"article\"\u001b[0m"}
+{"timestamp":"05:34:42.163","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mUncaught ReferenceError: ARTICLES is not defined\\u001b[39m\\n\\u001b[31m    at BlogSection (src/components/sections/Blog.tsx:33:12)\\n    at Home (src/app/page.tsx:28:7)\\u001b[39m\\n  \\u001b[90m31 |\\u001b[0m         {\\u001b[90m/* Articles Grid */\\u001b[0m}\\n  \\u001b[90m32 |\\u001b[0m         <div className=\\u001b[32m\\\"grid md:grid-cols-3 gap-8\\\"\\u001b[0m>\\n\\u001b[31m\\u001b[1m>\\u001b[0m \\u001b[90m33 |\\u001b[0m           {\\u001b[33mARTICLES\\u001b[0m.map((article, idx) => (\\n  \\u001b[90m   |\\u001b[0m            \\u001b[31m\\u001b[1m^\\u001b[0m\\n  \\u001b[90m34 |\\u001b[0m             <\\u001b[33mScrollReveal\\u001b[0m\\n  \\u001b[90m35 |\\u001b[0m               key={idx}\\n  \\u001b[90m36 |\\u001b[0m               \\u001b[36mas\\u001b[0m=\\u001b[32m\\\"article\\\"\\u001b[0m\""}
+{"timestamp":"05:34:42.210","source":"Server","level":"LOG","message":"✓ Compiled in 20ms"}
+{"timestamp":"05:34:44.774","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
+{"timestamp":"05:34:44.774","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
+{"timestamp":"05:34:44.801","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
+{"timestamp":"05:34:44.878","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"05:34:44.931","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"05:34:51.029","source":"Server","level":"LOG","message":"✓ Compiled in 20ms"}
+{"timestamp":"05:35:22.475","source":"Server","level":"LOG","message":"✓ Compiled in 21ms"}
+{"timestamp":"05:35:27.532","source":"Server","level":"LOG","message":"✓ Compiled in 20ms"}
+{"timestamp":"05:35:35.051","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
+{"timestamp":"05:35:38.199","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}
+{"timestamp":"05:35:41.451","source":"Server","level":"LOG","message":"✓ Compiled in 10ms"}
+{"timestamp":"05:35:44.104","source":"Server","level":"LOG","message":"✓ Compiled in 26ms"}
+{"timestamp":"05:35:48.527","source":"Server","level":"LOG","message":"✓ Compiled in 18ms"}
+{"timestamp":"05:35:54.074","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}
+{"timestamp":"05:35:56.782","source":"Server","level":"LOG","message":"✓ Compiled in 20ms"}
+{"timestamp":"05:36:00.427","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}
+{"timestamp":"05:36:04.954","source":"Server","level":"LOG","message":"✓ Compiled in 26ms"}
+{"timestamp":"05:36:08.966","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}
+{"timestamp":"05:36:11.563","source":"Server","level":"LOG","message":"✓ Compiled in 19ms"}
+{"timestamp":"05:36:14.296","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}
+{"timestamp":"05:36:33.340","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}

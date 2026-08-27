@@ -4,36 +4,10 @@ import Image from "next/image";
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 import ScrollReveal from "@components/ui/ScrollReveal";
+import { PROGRAMS } from "@constants/sections";
 
 export default function ProgramsSection() {
   const { t } = useLanguage();
-
-  const PROGRAMS = [
-    {
-      badge: t("program.monthly.badge"),
-      title: t("program.monthly.title"),
-      schedule: t("program.monthly.schedule"),
-      description: t("program.monthly.desc"),
-      image: "/img/FOTO BERSAMA/bersama-02.webp",
-      alt: "Pertemuan bulanan anggota Vis Society"
-    },
-    {
-      badge: t("program.triwulan.badge"),
-      title: t("program.triwulan.title"),
-      schedule: t("program.triwulan.schedule"),
-      description: t("program.triwulan.desc"),
-      image: "/img/FOTO SERAH TERIMA PELAKAT/serah-terima-01.webp",
-      alt: "Serah terima plakat dengan narasumber ahli"
-    },
-    {
-      badge: t("program.tahunan.badge"),
-      title: t("program.tahunan.title"),
-      schedule: t("program.tahunan.schedule"),
-      description: t("program.tahunan.desc"),
-      image: "/img/FOTO MOU/mou-01.webp",
-      alt: "Penandatanganan MOU kemitraan internasional"
-    }
-  ];
 
   return (
     <section id="program" className="py-16 md:py-24 px-4 md:px-8 bg-slate-50 border-t border-gray-100">
@@ -79,7 +53,7 @@ export default function ProgramsSection() {
                   className="absolute top-4 left-4 text-white text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider shadow-md"
                   style={{ backgroundColor: colors.primary }}
                 >
-                  {prog.badge}
+                  {t(prog.badgeKey)}
                 </div>
               </div>
 
@@ -90,13 +64,13 @@ export default function ProgramsSection() {
                     className="text-xs font-bold uppercase tracking-wider block mb-2"
                     style={{ color: colors.primary }}
                   >
-                    {prog.schedule}
+                    {t(prog.scheduleKey)}
                   </span>
                   <h4 className="text-xl font-bold text-black mb-3 leading-tight group-hover:text-[#053f5c] transition-colors duration-250">
-                    {prog.title}
+                    {t(prog.titleKey)}
                   </h4>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    {prog.description}
+                    {t(prog.descKey)}
                   </p>
                 </div>
                 

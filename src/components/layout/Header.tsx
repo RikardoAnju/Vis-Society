@@ -10,6 +10,12 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
 
+  const waMessage =
+    language === "id"
+      ? "Halo VIS Society, saya ingin mengetahui lebih lanjut tentang komunitas dan cara bergabung. Terima kasih."
+      : "Hi VIS Society, I'd like to know more about the community and how to join. Thank you.";
+  const waLink = `https://wa.me/628217601818?text=${encodeURIComponent(waMessage)}`;
+
   const NAV_ITEMS = [
     { label: t("nav.home"), href: "/", desc: "Halaman utama" },
     { label: t("nav.about"), href: "#about", desc: "Profil organisasi" },
@@ -85,7 +91,9 @@ export default function Header() {
 
           {/* CTA Button (Desktop only) */}
           <a
-            href="https://wa.me/628217601818"
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:inline-flex px-5 py-2 rounded-md font-bold text-xs sm:text-sm transition-all hover:opacity-90 flex-shrink-0 text-white cursor-pointer"
             style={{ backgroundColor: colors.primary }}
           >
@@ -129,7 +137,9 @@ export default function Header() {
           
           {/* CTA Button in mobile menu */}
           <a
-            href="https://wa.me/628217601818"
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsMobileMenuOpen(false)}
             className="inline-flex items-center justify-center w-full px-5 py-3 rounded-md font-bold text-sm text-white cursor-pointer"
             style={{ backgroundColor: colors.primary }}

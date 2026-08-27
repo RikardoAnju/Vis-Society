@@ -3,33 +3,10 @@
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 import ScrollReveal from "@components/ui/ScrollReveal";
+import { TESTIMONIALS } from "@constants/sections";
 
 export default function TestimonialsSection() {
   const { t } = useLanguage();
-
-  const TESTIMONIALS = [
-    {
-      name: t("testimonials.t1.name"),
-      role: t("testimonials.t1.role"),
-      text: t("testimonials.t1.text"),
-      initials: "LJ",
-      color: "#053f5c"
-    },
-    {
-      name: t("testimonials.t2.name"),
-      role: t("testimonials.t2.role"),
-      text: t("testimonials.t2.text"),
-      initials: "SL",
-      color: "#a5dded"
-    },
-    {
-      name: t("testimonials.t3.name"),
-      role: t("testimonials.t3.role"),
-      text: t("testimonials.t3.text"),
-      initials: "HW",
-      color: "#f1f5f9"
-    }
-  ];
 
   return (
     <section className="py-16 md:py-24 px-4 md:px-8 bg-slate-50 border-t border-gray-100">
@@ -67,7 +44,7 @@ export default function TestimonialsSection() {
 
               <div className="relative z-10">
                 <p className="text-sm md:text-base text-gray-600 italic leading-relaxed mb-8">
-                  &ldquo;{item.text}&rdquo;
+                  &ldquo;{t(item.textKey)}&rdquo;
                 </p>
               </div>
 
@@ -84,10 +61,10 @@ export default function TestimonialsSection() {
                 </div>
                 <div>
                   <h4 className="font-bold text-sm md:text-base text-black leading-tight">
-                    {item.name}
+                    {t(item.nameKey)}
                   </h4>
                   <p className="text-xs text-gray-500 mt-1">
-                    {item.role}
+                    {t(item.roleKey)}
                   </p>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import type { CSSProperties } from "react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 
@@ -11,6 +11,15 @@ export default function MembershipSection() {
   const [activePlan, setActivePlan] = useState(1);
   const [activeBenefit, setActiveBenefit] = useState(0);
   const { t, language } = useLanguage();
+
+  // Remember the card we're leaving so it stays layered above the rest
+  // while it slides back into the stack (prevents the mid-animation "jump").
+  const prevPlanRef = useRef(1);
+  const selectPlan = (index: number) => {
+    if (index === activePlan) return;
+    prevPlanRef.current = activePlan;
+    setActivePlan(index);
+  };
 
   const MEMBERSHIP_PLANS = [
     {
@@ -104,6 +113,15 @@ export default function MembershipSection() {
 
   const selectedPlan = MEMBERSHIP_PLANS[activePlan];
 
+  const WA_NUMBER = "628217601818";
+  const buildWaLink = (plan: (typeof MEMBERSHIP_PLANS)[number]) => {
+    const message =
+      language === "id"
+        ? `Halo VIS Society, saya tertarik untuk bergabung sebagai *${plan.name}* (biaya: ${plan.fee}, masa berlaku: ${plan.validity}).\n\nMohon informasi mengenai langkah pendaftaran dan proses pembayarannya. Terima kasih.`
+        : `Hi VIS Society, I'm interested in joining as *${plan.name}* (fee: ${plan.fee}, validity: ${plan.validity}).\n\nCould you share the registration steps and payment process? Thank you.`;
+    return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+  };
+
   const nextBenefit = () => {
     setActiveBenefit((prev) => (prev + 1) % MEMBERSHIP_BENEFITS.length);
   };
@@ -168,7 +186,7 @@ export default function MembershipSection() {
               </div>
             </div>
 
-            <div className="hidden md:block relative min-h-[440px]">
+            <div className="hidden md:block relative min-h-[520px]">
               {MEMBERSHIP_PLANS.map((plan, index) => {
                 const isActive = activePlan === index;
                 // Non-active cards fan out above, each keeping a clickable header strip;
@@ -182,14 +200,14 @@ export default function MembershipSection() {
                   <button
                     type="button"
                     aria-pressed={isActive}
-                    onClick={() => setActivePlan(index)}
+                    onClick={() => selectPlan(index)}
                     key={plan.name}
                     className="w-full text-left rounded-2xl p-6 border flex flex-col min-h-[270px] transition-[transform,background-color,border-color,box-shadow] duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform md:absolute md:inset-x-0 md:[transform:translateY(var(--stack-y))_rotate(var(--stack-rotate))_scale(var(--stack-scale))] focus:outline-none focus:ring-2 focus:ring-offset-2 mb-5 md:mb-0"
                     style={{
                       backgroundColor: isActive ? colors.primary : "#ffffff",
                       borderColor: isActive ? colors.primary : "#e5e7eb",
                       boxShadow: isActive ? "0 28px 60px rgba(5, 63, 92, 0.28)" : "0 10px 28px rgba(15, 23, 42, 0.08)",
-                      zIndex: isActive ? 30 : 10 + nonActiveRank,
+                      zIndex: isActive ? 30 : prevPlanRef.current === index ? 25 : 10 + nonActiveRank,
                       transformOrigin: "center top",
                       "--tw-ring-color": colors.secondary,
                       "--stack-y": `${stackY}px`,
@@ -276,7 +294,9 @@ export default function MembershipSection() {
                   </p>
                 </div>
                 <a
-                  href="https://wa.me/628217601818"
+                  href={buildWaLink(selectedPlan)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90 cursor-pointer"
                   style={{ backgroundColor: colors.primary }}
                 >

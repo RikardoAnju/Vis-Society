@@ -45,6 +45,22 @@ export default function Home() {
               <p className="text-white/70 text-sm leading-relaxed max-w-xs">
                 {t("footer.desc")}
               </p>
+              <a
+                href="https://www.instagram.com/vis.society/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram VIS Society"
+                className="mt-5 inline-flex items-center gap-2.5 text-white/70 hover:text-white transition-colors text-sm font-medium"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/5">
+                  <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" />
+                    <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.8" />
+                    <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" />
+                  </svg>
+                </span>
+                @vis.society
+              </a>
             </ScrollReveal>
 
             {/* Quick Links */}
@@ -68,8 +84,16 @@ export default function Home() {
               </h5>
               <ul className="space-y-3 text-sm text-white/70">
                 <li>Komplek perkantoran Mega Legenda II Blok C2/27</li>
-                <li>0821-7601-818</li>
-                <li>@vis.society</li>
+                <li>
+                  <a href="https://wa.me/628217601818" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    0821-7601-818
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/vis.society/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    @vis.society
+                  </a>
+                </li>
               </ul>
             </ScrollReveal>
 

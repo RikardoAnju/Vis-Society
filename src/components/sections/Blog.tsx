@@ -4,33 +4,10 @@ import Image from "next/image";
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 import ScrollReveal from "@components/ui/ScrollReveal";
+import { BLOG_ARTICLES } from "@constants/sections";
 
 export default function BlogSection() {
   const { t } = useLanguage();
-
-  const ARTICLES = [
-    {
-      title: t("blog.a1.title"),
-      date: t("blog.a1.date"),
-      excerpt: t("blog.a1.excerpt"),
-      image: "/img/FOTO MOU/mou-02.webp",
-      alt: "Nota Kesepahaman MOU Kerja Sama AI Internasional"
-    },
-    {
-      title: t("blog.a2.title"),
-      date: t("blog.a2.date"),
-      excerpt: t("blog.a2.excerpt"),
-      image: "/img/FOTO BERSAMA/bersama-03.webp",
-      alt: "Suasana Pertemuan Bulanan Member Vis Society di Batam"
-    },
-    {
-      title: t("blog.a3.title"),
-      date: t("blog.a3.date"),
-      excerpt: t("blog.a3.excerpt"),
-      image: "/img/FOTO SERAH TERIMA PELAKAT/serah-terima-02.webp",
-      alt: "Pemberian Plakat Apresiasi Pembicara Triwulan"
-    }
-  ];
 
   return (
     <section id="blog" className="py-16 md:py-24 px-4 md:px-8 bg-white border-t border-gray-100">
@@ -53,7 +30,7 @@ export default function BlogSection() {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {ARTICLES.map((article, idx) => (
+          {BLOG_ARTICLES.map((article, idx) => (
             <ScrollReveal
               key={idx}
               as="article"
@@ -76,13 +53,13 @@ export default function BlogSection() {
               <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-semibold text-gray-400 block mb-2">
-                    {article.date}
+                    {t(article.dateKey)}
                   </span>
                   <h4 className="text-base md:text-lg font-bold text-black mb-3 leading-snug group-hover:text-[#053f5c] transition-colors duration-200">
-                    {article.title}
+                    {t(article.titleKey)}
                   </h4>
                   <p className="text-xs md:text-sm text-gray-500 leading-relaxed">
-                    {article.excerpt}
+                    {t(article.excerptKey)}
                   </p>
                 </div>
 
