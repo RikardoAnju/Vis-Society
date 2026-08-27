@@ -72,9 +72,9 @@ export default function HeroSection() {
 
       {/* Bottom Rounded Image Area (Aligned with 7xl margins) */}
       <div className="max-w-7xl mx-auto">
-        <div 
-          className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200/50 shadow-2xl bg-white animate-image-up"
-          style={{ 
+        <div
+          className="relative w-full aspect-[16/9] rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200/50 shadow-2xl bg-white animate-image-up"
+          style={{
             animationDelay: `${0.5 + titleWords.length * 0.15}s`
           }}
         >
@@ -82,8 +82,9 @@ export default function HeroSection() {
             src="/img/FOTO BERSAMA/bersama-11-enhanced.png"
             alt="Vis Society Community Gathering"
             fill
-            sizes="(max-width: 1200px) 100vw, 1200px"
-            className="object-cover object-[center_20%] transition-transform duration-700 hover:scale-[1.02]"
+            quality={90}
+            sizes="(max-width: 1280px) 92vw, 1216px"
+            className="object-cover object-[center_18%] transition-transform duration-700 hover:scale-[1.02]"
             priority
           />
         </div>
