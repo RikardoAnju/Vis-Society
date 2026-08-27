@@ -5,7 +5,7 @@ import { useState } from "react";
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 
-const Y_OFFSETS = [0, 80, 135];
+const PEEK = 76;
 
 export default function MembershipSection() {
   const [activePlan, setActivePlan] = useState(1);
@@ -168,10 +168,15 @@ export default function MembershipSection() {
               </div>
             </div>
 
-            <div className="hidden md:block relative min-h-[450px]">
+            <div className="hidden md:block relative min-h-[440px]">
               {MEMBERSHIP_PLANS.map((plan, index) => {
                 const isActive = activePlan === index;
-                const stackOffset = index - activePlan;
+                // Non-active cards fan out above, each keeping a clickable header strip;
+                // the active card drops below them so its body never covers the others.
+                const nonActiveRank = index < activePlan ? index : index - 1;
+                const stackY = isActive
+                  ? (MEMBERSHIP_PLANS.length - 1) * PEEK
+                  : nonActiveRank * PEEK;
 
                 return (
                   <button
@@ -179,47 +184,45 @@ export default function MembershipSection() {
                     aria-pressed={isActive}
                     onClick={() => setActivePlan(index)}
                     key={plan.name}
-                    className="w-full text-left rounded-2xl p-6 border flex flex-col min-h-[270px] transition-all duration-500 ease-in-out md:absolute md:inset-x-0 md:[transform:translateY(var(--stack-y))_rotate(var(--stack-rotate))_scale(var(--stack-scale))] focus:outline-none focus:ring-2 focus:ring-offset-2 mb-5 md:mb-0"
+                    className="w-full text-left rounded-2xl p-6 border flex flex-col min-h-[270px] transition-[transform,background-color,border-color,box-shadow] duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform md:absolute md:inset-x-0 md:[transform:translateY(var(--stack-y))_rotate(var(--stack-rotate))_scale(var(--stack-scale))] focus:outline-none focus:ring-2 focus:ring-offset-2 mb-5 md:mb-0"
                     style={{
                       backgroundColor: isActive ? colors.primary : "#ffffff",
                       borderColor: isActive ? colors.primary : "#e5e7eb",
                       boxShadow: isActive ? "0 28px 60px rgba(5, 63, 92, 0.28)" : "0 10px 28px rgba(15, 23, 42, 0.08)",
-                      zIndex: isActive ? 30 : 10 - Math.abs(stackOffset),
+                      zIndex: isActive ? 30 : 10 + nonActiveRank,
                       transformOrigin: "center top",
                       "--tw-ring-color": colors.secondary,
-                      "--stack-y": `${Y_OFFSETS[index]}px`,
-                      "--stack-rotate": `${stackOffset * -2.5}deg`,
-                      "--stack-scale": isActive ? 1 : 0.95,
+                      "--stack-y": `${stackY}px`,
+                      "--stack-rotate": `${isActive ? 0 : (nonActiveRank - 1) * 2}deg`,
+                      "--stack-scale": isActive ? 1 : 0.96,
                     } as CSSProperties & Record<string, string | number>}
                   >
                     <div className="flex items-start justify-between gap-4 mb-8">
                       <div>
-                        <p className={`text-sm font-semibold mb-3 ${isActive ? "text-white/75" : "text-gray-500"}`}>
+                        <p className={`text-sm font-semibold mb-3 transition-colors duration-500 ${isActive ? "text-white/75" : "text-gray-500"}`}>
                           {plan.audience}
                         </p>
-                        <h4 className={`text-xl md:text-2xl font-bold leading-tight ${isActive ? "text-white" : "text-black"}`}>
+                        <h4 className={`text-xl md:text-2xl font-bold leading-tight transition-colors duration-500 ${isActive ? "text-white" : "text-black"}`}>
                           {plan.name}
                         </h4>
                       </div>
                       <span
-                        className={`rounded-full px-3 py-1 text-xs font-semibold ${isActive ? "bg-white/15 text-white" : "text-gray-500"}`}
+                        className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors duration-500 ${isActive ? "bg-white/15 text-white" : "text-gray-500"}`}
                       >
                         {isActive ? (language === "id" ? "Terpilih" : "Selected") : (language === "id" ? "Lihat" : "View")}
                       </span>
                     </div>
 
                     <div className="mt-auto">
-                      <p className={`text-2xl md:text-3xl font-bold mb-4 ${isActive ? "text-white" : "text-black"}`}>
+                      <p className={`text-2xl md:text-3xl font-bold mb-4 transition-colors duration-500 ${isActive ? "text-white" : "text-black"}`}>
                         {plan.fee}
                       </p>
-                      <p className={`text-sm leading-relaxed ${isActive ? "text-white/80" : "text-gray-600"}`}>
+                      <p className={`text-sm leading-relaxed transition-colors duration-500 ${isActive ? "text-white/80" : "text-gray-600"}`}>
                         {plan.description}
                       </p>
-                      {isActive && (
-                        <p className="mt-5 text-sm font-bold text-white">
-                          {language === "id" ? "Ketuk untuk melihat benefit" : "Tap to explore benefits"}
-                        </p>
-                      )}
+                      <p className={`mt-5 text-sm font-bold text-white transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"}`}>
+                        {language === "id" ? "Ketuk untuk melihat benefit" : "Tap to explore benefits"}
+                      </p>
                     </div>
                   </button>
                 );

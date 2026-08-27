@@ -9,10 +9,7 @@ export const translations = {
       contactBtn: "Kirim Pesan"
     },
     hero: {
-      word1: "Komunitas",
-      word2: "Profesional",
-      word3: "Lintas",
-      word4: "Batas",
+      title: "Bersama Membangun Koneksi, Kolaborasi, dan Peluang Tanpa Batas",
       subtitle: "/ Growth Mindset Community",
       desc: "Terhubung, berkolaborasi, dan berkembang bersama profesional dan pengusaha di Batam, Singapura, dan Malaysia dalam ekosistem terpercaya kami.",
       cta: "Bergabung Sekarang"
@@ -161,6 +158,27 @@ export const translations = {
         role: "Founder Batam Logistik Utama",
         text: "Sebagai pengusaha di Batam, Vis Society membantu saya memperluas wawasan dan peluang bisnis hingga ke Singapura dan Malaysia. Diskusi bulanan mereka selalu memberikan insight praktis."
       }
+    },
+    blog: {
+      label: "Berita & Artikel",
+      heading: "Kabar & Wawasan Terbaru",
+      desc: "Ikuti terus perkembangan kegiatan, berita kerja sama, dan artikel edukasi bisnis dari Vis Society.",
+      readMore: "Baca Selengkapnya",
+      a1: {
+        title: "Kolaborasi Strategis Vis Society Batam dengan Aiving South Korea",
+        date: "15 Agustus 2026",
+        excerpt: "Vis Society resmi menandatangani nota kesepahaman (MOU) dengan Aiving, perusahaan AI asal Korea Selatan, untuk memperkuat integrasi solusi teknologi kecerdasan buatan..."
+      },
+      a2: {
+        title: "Menumbuhkan Mindset Bisnis Global di Batam Monthly Meeting",
+        date: "28 Juli 2026",
+        excerpt: "Pertemuan rutin bulanan Vis Society bulan ini dihadiri oleh puluhan profesional dan pelaku usaha lokal untuk mendiskusikan peluang investasi regional..."
+      },
+      a3: {
+        title: "Serah Terima Plakat Apresiasi Kepada Pembicara Spesial Triwulan",
+        date: "10 Juni 2026",
+        excerpt: "Sebagai bentuk penghargaan atas kontribusi pengetahuan yang diberikan, dewan pengurus Vis Society menyerahkan plakat apresiasi kepada perwakilan..."
+      }
     }
   },
   en: {
@@ -173,10 +191,7 @@ export const translations = {
       contactBtn: "Send Message"
     },
     hero: {
-      word1: "Cross-Border",
-      word2: "Professional",
-      word3: "Community",
-      word4: "",
+      title: "Building Connections, Collaborations, and Boundless Opportunities Together",
       subtitle: "/ Growth Mindset Community",
       desc: "Connect, collaborate, and grow together with professionals and entrepreneurs in Batam, Singapore, and Malaysia in our trusted ecosystem.",
       cta: "Join Us Now"
@@ -325,13 +340,34 @@ export const translations = {
         role: "Founder of Batam Logistik Utama",
         text: "As an entrepreneur in Batam, Vis Society helped me expand my horizons and business opportunities to Singapore and Malaysia. Their monthly discussions always provide practical insights."
       }
+    },
+    blog: {
+      label: "News & Articles",
+      heading: "Latest News & Insights",
+      desc: "Stay updated with our latest activities, collaboration news, and business educational articles from Vis Society.",
+      readMore: "Read More",
+      a1: {
+        title: "Strategic Collaboration of Vis Society Batam with Aiving South Korea",
+        date: "August 15, 2026",
+        excerpt: "Vis Society officially signed a memorandum of understanding (MOU) with Aiving, an AI company from South Korea, to strengthen the integration of artificial intelligence technology..."
+      },
+      a2: {
+        title: "Fostering a Global Business Mindset at Batam Monthly Meeting",
+        date: "July 28, 2026",
+        excerpt: "This month's Vis Society regular monthly meeting was attended by dozens of local professionals and business actors to discuss regional investment opportunities..."
+      },
+      a3: {
+        title: "Plaque Handover Appreciation to Quarterly Special Speaker",
+        date: "June 10, 2026",
+        excerpt: "As a form of appreciation for the knowledge contribution provided, the board of Vis Society presented an appreciation plaque to the representative..."
+      }
     }
   }
 } as const;
 
 export type TranslationKey = 
   | "nav.home" | "nav.about" | "nav.program" | "nav.membership" | "nav.faq" | "nav.contactBtn"
-  | "hero.word1" | "hero.word2" | "hero.word3" | "hero.word4" | "hero.subtitle" | "hero.desc" | "hero.cta"
+  | "hero.title" | "hero.subtitle" | "hero.desc" | "hero.cta"
   | "about.label" | "about.heading" | "about.desc"
   | "about.vision.title" | "about.vision.text"
   | "about.mission.title"
@@ -358,4 +394,8 @@ export type TranslationKey =
   | "testimonials.label" | "testimonials.heading" | "testimonials.desc"
   | "testimonials.t1.name" | "testimonials.t1.role" | "testimonials.t1.text"
   | "testimonials.t2.name" | "testimonials.t2.role" | "testimonials.t2.text"
-  | "testimonials.t3.name" | "testimonials.t3.role" | "testimonials.t3.text";
+  | "testimonials.t3.name" | "testimonials.t3.role" | "testimonials.t3.text"
+  | "blog.label" | "blog.heading" | "blog.desc" | "blog.readMore"
+  | "blog.a1.title" | "blog.a1.date" | "blog.a1.excerpt"
+  | "blog.a2.title" | "blog.a2.date" | "blog.a2.excerpt"
+  | "blog.a3.title" | "blog.a3.date" | "blog.a3.excerpt";

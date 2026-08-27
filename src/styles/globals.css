@@ -38,13 +38,62 @@ body {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes animSlideLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes animSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes animBlurUp {
+  from { opacity: 0; filter: blur(8px); transform: translateY(24px); }
+  to { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+
+@keyframes animImageUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes animFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes animScaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-slide-left {
+  opacity: 0;
+  animation: animSlideLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: animSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-blur-up {
+  opacity: 0;
+  animation: animBlurUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-image-up {
+  opacity: 0;
+  animation: animImageUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: animFadeIn 0.8s ease both;
+}
+
+.animate-scale-up {
+  opacity: 0;
+  animation: animScaleUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }

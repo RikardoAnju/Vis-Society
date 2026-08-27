@@ -2,6 +2,7 @@
 
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
+import ScrollReveal from "@components/ui/ScrollReveal";
 
 export default function TestimonialsSection() {
   const { t } = useLanguage();
@@ -34,7 +35,7 @@ export default function TestimonialsSection() {
     <section className="py-16 md:py-24 px-4 md:px-8 bg-slate-50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <ScrollReveal animation="slide-up" className="text-center mb-12 md:mb-16">
           <h2
             className="text-xs font-bold tracking-widest uppercase mb-3 inline-flex rounded-full px-4 py-2 bg-white border border-slate-200"
             style={{ color: colors.primary }}
@@ -47,13 +48,16 @@ export default function TestimonialsSection() {
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             {t("testimonials.desc")}
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {TESTIMONIALS.map((item, idx) => (
-            <article
+            <ScrollReveal
               key={idx}
+              as="article"
+              animation="slide-up"
+              delay={idx * 150}
               className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 ease-out hover:-translate-y-1.5 flex flex-col justify-between relative group"
             >
               {/* Quote Icon Background Decorator */}
@@ -87,7 +91,7 @@ export default function TestimonialsSection() {
                   </p>
                 </div>
               </div>
-            </article>
+            </ScrollReveal>
           ))}
         </div>
       </div>
