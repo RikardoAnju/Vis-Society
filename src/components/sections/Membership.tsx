@@ -1,7 +1,7 @@
 'use client';
 
 import type { CSSProperties } from "react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 
@@ -12,14 +12,19 @@ export default function MembershipSection() {
   const [activeBenefit, setActiveBenefit] = useState(0);
   const { t, language } = useLanguage();
 
-  // Remember the card we're leaving so it stays layered above the rest
-  // while it slides back into the stack (prevents the mid-animation "jump").
-  const prevPlanRef = useRef(1);
+  // Keep the card we're leaving layered above the rest *only while it slides
+  // back* into the stack (prevents the mid-animation "jump"). It must drop back
+  // afterwards, otherwise it stays on top and buries the card behind it.
+  const [leavingPlan, setLeavingPlan] = useState<number | null>(null);
+  const leaveTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const selectPlan = (index: number) => {
     if (index === activePlan) return;
-    prevPlanRef.current = activePlan;
+    setLeavingPlan(activePlan);
     setActivePlan(index);
+    clearTimeout(leaveTimer.current);
+    leaveTimer.current = setTimeout(() => setLeavingPlan(null), 600);
   };
+  useEffect(() => () => clearTimeout(leaveTimer.current), []);
 
   const MEMBERSHIP_PLANS = [
     {
@@ -113,6 +118,11 @@ export default function MembershipSection() {
 
   const selectedPlan = MEMBERSHIP_PLANS[activePlan];
 
+  const prevPlan = () =>
+    selectPlan((activePlan - 1 + MEMBERSHIP_PLANS.length) % MEMBERSHIP_PLANS.length);
+  const nextPlan = () =>
+    selectPlan((activePlan + 1) % MEMBERSHIP_PLANS.length);
+
   const WA_NUMBER = "628217601818";
   const buildWaLink = (plan: (typeof MEMBERSHIP_PLANS)[number]) => {
     const message =
@@ -186,7 +196,8 @@ export default function MembershipSection() {
               </div>
             </div>
 
-            <div className="hidden md:block relative min-h-[520px]">
+            <div className="hidden md:flex md:flex-col">
+             <div className="relative min-h-[520px]">
               {MEMBERSHIP_PLANS.map((plan, index) => {
                 const isActive = activePlan === index;
                 // Non-active cards fan out above, each keeping a clickable header strip;
@@ -207,7 +218,7 @@ export default function MembershipSection() {
                       backgroundColor: isActive ? colors.primary : "#ffffff",
                       borderColor: isActive ? colors.primary : "#e5e7eb",
                       boxShadow: isActive ? "0 28px 60px rgba(5, 63, 92, 0.28)" : "0 10px 28px rgba(15, 23, 42, 0.08)",
-                      zIndex: isActive ? 30 : prevPlanRef.current === index ? 25 : 10 + nonActiveRank,
+                      zIndex: isActive ? 30 : leavingPlan === index ? 25 : 10 + nonActiveRank,
                       transformOrigin: "center top",
                       "--tw-ring-color": colors.secondary,
                       "--stack-y": `${stackY}px`,
@@ -245,6 +256,50 @@ export default function MembershipSection() {
                   </button>
                 );
               })}
+             </div>
+
+             {/* Prev / next control for the card stack */}
+             <div className="flex items-center justify-center gap-5 mt-1">
+               <button
+                 type="button"
+                 onClick={prevPlan}
+                 aria-label={language === "id" ? "Membership sebelumnya" : "Previous membership"}
+                 className="h-10 w-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 shadow-sm transition-all hover:border-slate-300 hover:text-black hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer"
+                 style={{ "--tw-ring-color": colors.secondary } as CSSProperties}
+               >
+                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                 </svg>
+               </button>
+
+               <div className="flex gap-2">
+                 {MEMBERSHIP_PLANS.map((plan, index) => (
+                   <button
+                     type="button"
+                     key={plan.name}
+                     onClick={() => selectPlan(index)}
+                     aria-label={plan.shortName}
+                     className="h-2 rounded-full transition-all duration-300"
+                     style={{
+                       width: activePlan === index ? "1.5rem" : "0.5rem",
+                       backgroundColor: activePlan === index ? colors.primary : "#cbd5e1",
+                     }}
+                   />
+                 ))}
+               </div>
+
+               <button
+                 type="button"
+                 onClick={nextPlan}
+                 aria-label={language === "id" ? "Membership berikutnya" : "Next membership"}
+                 className="h-10 w-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 shadow-sm transition-all hover:border-slate-300 hover:text-black hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer"
+                 style={{ "--tw-ring-color": colors.secondary } as CSSProperties}
+               >
+                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                 </svg>
+               </button>
+             </div>
             </div>
 
             <article
