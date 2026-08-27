@@ -1,10 +1,52 @@
 'use client';
 
+import { useState } from "react";
+import Image from "next/image";
 import { colors } from "@lib/color";
 import { STATISTICS } from "@constants/index";
 import AnimatedCounter from "@components/ui/AnimatedCounter";
 
+const ORG_DEPARTMENTS = [
+  {
+    title: "Registrasi & Keanggotaan",
+    head: { name: "Yoseph Eduardus", role: "Registrasi dan Keanggotaan" },
+    staff: [
+      { name: "Sandedex", role: "Staf Registrasi" },
+      { name: "Septian E Wardoyo", role: "Staf Registrasi" }
+    ]
+  },
+  {
+    title: "Human Development",
+    head: { name: "Yohanes Ad Purnomo", role: "Human Development" },
+    staff: []
+  },
+  {
+    title: "Hubungan Internasional",
+    head: { name: "Bisa Mulia", role: "Hubungan Internasional" },
+    staff: [
+      { name: "Michael Dimas", role: "Staf Hubungan Internasional" }
+    ]
+  },
+  {
+    title: "Sekretariat Jenderal",
+    head: { name: "Priyo", role: "Sekjen" },
+    staff: [
+      { name: "Muhammad Andika", role: "Staf Sekjen" },
+      { name: "Adrian", role: "Staf Sekjen" }
+    ]
+  },
+  {
+    title: "Bendahara Umum",
+    head: { name: "Elisabeth", role: "Bendahara Umum" },
+    staff: [
+      { name: "Ditha", role: "Staf Bendahara" }
+    ]
+  }
+];
+
 export default function AboutSection() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section id="about" className="py-16 md:py-24 px-4 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -87,6 +129,143 @@ export default function AboutSection() {
             </div>
           ))}
         </div>
+
+        {/* Org Structure Sub-section */}
+        <div className="mt-20 border-t border-gray-100 pt-16">
+          <div className="text-center mb-12">
+            <h2 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: colors.primary }}>
+              Struktur Organisasi
+            </h2>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-black mb-4">
+              Susunan Dewan Pengurus Vis Society
+            </h3>
+            <p className="text-base text-gray-600 max-w-2xl mx-auto mb-6">
+              Struktur kepengurusan harian yang berdedikasi untuk menghubungkan dan memfasilitasi kolaborasi bisnis lintas batas.
+            </p>
+            <button
+              onClick={() => setShowModal(true)}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-semibold hover:bg-slate-50 transition-colors cursor-pointer"
+              style={{ color: colors.primary, borderColor: colors.primary }}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.644C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.437 0 .644C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Lihat Bagan Gambar Asli
+            </button>
+          </div>
+
+          {/* Org Tree Visualization */}
+          <div className="flex flex-col items-center">
+            {/* Top Leadership */}
+            <div className="flex flex-col items-center">
+              {/* Ketua Umum 1 */}
+              <div
+                className="text-white p-5 rounded-2xl shadow-lg w-64 text-center transition-transform hover:scale-[1.02] duration-300"
+                style={{ backgroundColor: colors.primary }}
+              >
+                <p className="font-bold text-lg">Enrico Moreno</p>
+                <p className="text-xs opacity-80 mt-1 uppercase tracking-wide">Ketua Umum</p>
+              </div>
+
+              {/* Connector line */}
+              <div className="w-0.5 h-8 bg-slate-200"></div>
+
+              {/* Ketua Umum 2 */}
+              <div
+                className="text-white p-5 rounded-2xl shadow-lg w-64 text-center transition-transform hover:scale-[1.02] duration-300"
+                style={{ backgroundColor: colors.primary }}
+              >
+                <p className="font-bold text-lg">Antonius Marco Lombardo</p>
+                <p className="text-xs opacity-80 mt-1 uppercase tracking-wide">Ketua Umum</p>
+              </div>
+
+              {/* Connector line down to split */}
+              <div className="w-0.5 h-8 bg-slate-200"></div>
+            </div>
+
+            {/* Departments Row */}
+            <div className="w-full relative mt-2">
+              {/* Horizontal Line connecting columns on desktop */}
+              <div className="absolute top-0 left-[10%] right-[10%] h-0.5 bg-slate-200 hidden md:block"></div>
+
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 relative">
+                {ORG_DEPARTMENTS.map((dept, idx) => (
+                  <div key={idx} className="flex flex-col items-center">
+                    {/* Vertical line from connector to department head on desktop */}
+                    <div className="w-0.5 h-6 bg-slate-200 hidden md:block"></div>
+
+                    {/* Department Header/Title */}
+                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 md:mt-2 text-center">
+                      {dept.title}
+                    </p>
+
+                    {/* Department Head Card */}
+                    <div
+                      className="border-2 p-4 rounded-xl shadow-md w-full max-w-[200px] text-center bg-white transition-all hover:shadow-lg duration-300"
+                      style={{ borderColor: colors.secondary }}
+                    >
+                      <p className="font-bold text-sm text-black leading-tight">{dept.head.name}</p>
+                      <p className="text-[10px] text-gray-500 mt-1 uppercase font-medium">{dept.head.role}</p>
+                    </div>
+
+                    {/* Staff list */}
+                    {dept.staff.length > 0 && (
+                      <div className="flex flex-col items-center w-full">
+                        {dept.staff.map((staff) => (
+                          <div key={staff.name} className="flex flex-col items-center w-full">
+                            {/* Vertical connector line */}
+                            <div className="w-0.5 h-4 bg-slate-200"></div>
+
+                            {/* Staff Card */}
+                            <div className="bg-slate-50 border border-slate-200 text-slate-800 p-3 rounded-lg shadow-sm w-full max-w-[170px] text-center hover:bg-slate-100/70 transition-colors duration-200">
+                              <p className="font-semibold text-xs text-slate-800">{staff.name}</p>
+                              <p className="text-[9px] text-slate-400 mt-0.5 uppercase tracking-wider">{staff.role}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Image Modal */}
+        {showModal && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 animate-fadeIn"
+            onClick={() => setShowModal(false)}
+          >
+            <div
+              className="relative max-w-5xl w-full max-h-[90vh] bg-white rounded-2xl p-2 overflow-hidden shadow-2xl flex flex-col"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-center p-3 border-b border-slate-100">
+                <h4 className="font-bold text-black text-sm md:text-base">Bagan Struktur Organisasi</h4>
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="p-1.5 rounded-full hover:bg-slate-100 transition-colors text-slate-500 hover:text-black cursor-pointer"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div className="relative flex-1 overflow-auto p-4 flex justify-center items-center bg-slate-50 min-h-[300px]">
+                <Image
+                  src="/img/struktur-organisasi.jpg"
+                  alt="Bagan Struktur Organisasi Vis Society"
+                  width={1200}
+                  height={750}
+                  className="max-w-full max-h-[70vh] object-contain rounded-lg border border-slate-200"
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

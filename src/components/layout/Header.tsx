@@ -8,8 +8,10 @@ import { useState, useEffect } from "react";
 const NAV_ITEMS = [
   { label: "Beranda", href: "/", desc: "Halaman utama" },
   { label: "Tentang Kami", href: "#about", desc: "Profil organisasi" },
+  { label: "Membership", href: "#membership", desc: "Pilihan membership" },
   { label: "Program", href: "#program", desc: "Program & inisiatif" },
   { label: "Galeri", href: "#gallery", desc: "Dokumentasi kegiatan" },
+  { label: "FAQ", href: "#faq", desc: "Pertanyaan sering diajukan" },
 ];
 
 export default function Header() {
@@ -36,9 +38,10 @@ export default function Header() {
         <Image
           src="/img/vis_logo.png"
           alt={SITE_NAME}
-          width={60}
-          height={60}
-          className="h-16 w-auto flex-shrink-0"
+          width={220}
+          height={114}
+          className="h-12 sm:h-14 md:h-16 w-auto flex-shrink-0"
+          priority
         />
 
         {/* Navigation - Center */}

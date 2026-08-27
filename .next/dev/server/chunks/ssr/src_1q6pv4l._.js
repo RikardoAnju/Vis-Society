@@ -29,6 +29,11 @@ const NAV_ITEMS = [
         desc: "Profil organisasi"
     },
     {
+        label: "Membership",
+        href: "#membership",
+        desc: "Pilihan membership"
+    },
+    {
         label: "Program",
         href: "#program",
         desc: "Program & inisiatif"
@@ -62,12 +67,13 @@ function Header() {
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     src: "/img/vis_logo.png",
                     alt: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$constants$2f$index$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SITE_NAME"],
-                    width: 60,
-                    height: 60,
-                    className: "h-16 w-auto flex-shrink-0"
+                    width: 220,
+                    height: 114,
+                    className: "h-12 sm:h-14 md:h-16 w-auto flex-shrink-0",
+                    priority: true
                 }, void 0, false, {
                     fileName: "[project]/src/components/layout/Header.tsx",
-                    lineNumber: 36,
+                    lineNumber: 37,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -90,7 +96,7 @@ function Header() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/layout/Header.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 59,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -98,23 +104,23 @@ function Header() {
                                         children: item.desc
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/layout/Header.tsx",
-                                        lineNumber: 59,
+                                        lineNumber: 61,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, item.href, true, {
                                 fileName: "[project]/src/components/layout/Header.tsx",
-                                lineNumber: 49,
+                                lineNumber: 51,
                                 columnNumber: 17
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/layout/Header.tsx",
-                        lineNumber: 47,
+                        lineNumber: 49,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/layout/Header.tsx",
-                    lineNumber: 45,
+                    lineNumber: 47,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -126,18 +132,18 @@ function Header() {
                     children: "Kirim Pesan"
                 }, void 0, false, {
                     fileName: "[project]/src/components/layout/Header.tsx",
-                    lineNumber: 69,
+                    lineNumber: 71,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/layout/Header.tsx",
-            lineNumber: 34,
+            lineNumber: 35,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/layout/Header.tsx",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 5
     }, this);
 }
@@ -526,9 +532,10 @@ function HeroSection() {
         className: "relative w-full h-[500px] md:h-[600px] overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                src: "/img/FOTO BERSAMA/bersama-11.webp",
+                src: "/img/FOTO BERSAMA/bersama-11-enhanced.png",
                 alt: "Hero Background",
                 fill: true,
+                sizes: "100vw",
                 className: "object-cover",
                 priority: true
             }, void 0, false, {
@@ -540,7 +547,7 @@ function HeroSection() {
                 className: "absolute inset-0 bg-black/40"
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/Hero.tsx",
-                lineNumber: 19,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -564,12 +571,12 @@ function HeroSection() {
                                             children: word
                                         }, word, false, {
                                             fileName: "[project]/src/components/sections/Hero.tsx",
-                                            lineNumber: 28,
+                                            lineNumber: 29,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                    lineNumber: 26,
+                                    lineNumber: 27,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -586,7 +593,7 @@ function HeroSection() {
                                                 children: word
                                             }, word, false, {
                                                 fileName: "[project]/src/components/sections/Hero.tsx",
-                                                lineNumber: 39,
+                                                lineNumber: 40,
                                                 columnNumber: 17
                                             }, this)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -597,19 +604,19 @@ function HeroSection() {
                                             children: "/ Growth Mindset Community"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/sections/Hero.tsx",
-                                            lineNumber: 47,
+                                            lineNumber: 48,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/sections/Hero.tsx",
-                                    lineNumber: 37,
+                                    lineNumber: 38,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/sections/Hero.tsx",
-                            lineNumber: 25,
+                            lineNumber: 26,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -620,7 +627,7 @@ function HeroSection() {
                             children: "Terhubung, berkolaborasi, dan berkembang bersama profesional dan pengusaha di Batam, Singapura, dan Malaysia dalam ekosistem terpercaya kami."
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/Hero.tsx",
-                            lineNumber: 57,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -633,18 +640,18 @@ function HeroSection() {
                             children: "Bergabung Sekarang"
                         }, void 0, false, {
                             fileName: "[project]/src/components/sections/Hero.tsx",
-                            lineNumber: 65,
+                            lineNumber: 66,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/sections/Hero.tsx",
-                    lineNumber: 23,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/sections/Hero.tsx",
-                lineNumber: 22,
+                lineNumber: 23,
                 columnNumber: 7
             }, this)
         ]

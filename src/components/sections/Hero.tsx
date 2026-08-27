@@ -8,9 +8,10 @@ export default function HeroSection() {
     <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/img/FOTO BERSAMA/bersama-11.webp"
+        src="/img/FOTO BERSAMA/bersama-11-enhanced.png"
         alt="Hero Background"
         fill
+        sizes="100vw"
         className="object-cover"
         priority
       />

@@ -22,3 +22,8 @@ export interface TeamMember {
   role: string;
   image?: string;
 }
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}

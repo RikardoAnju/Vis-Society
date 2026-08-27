@@ -1,9 +1,12 @@
 import Header from "@components/layout/Header";
 import HeroSection from "@components/sections/Hero";
 import AboutSection from "@components/sections/About";
+import MembershipSection from "@components/sections/Membership";
+import FAQSection from "@components/sections/FAQ";
 import { colors } from "@lib/color";
 import { SITE_NAME } from "@constants/index";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,6 +14,8 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AboutSection />
+      <MembershipSection />
+      <FAQSection />
 
       {/* Footer */}
       <footer className="pt-16 pb-8 px-4 md:px-8" style={{ backgroundColor: colors.primary }}>
@@ -34,8 +39,10 @@ export default function Home() {
             <div>
               <h5 className="text-white font-semibold mb-4 text-sm tracking-wide uppercase">Navigasi</h5>
               <ul className="space-y-3 text-sm">
-                <li><a href="/" className="text-white/70 hover:text-white transition-colors">Beranda</a></li>
+                <li><Link href="/" className="text-white/70 hover:text-white transition-colors">Beranda</Link></li>
                 <li><a href="#about" className="text-white/70 hover:text-white transition-colors">Tentang Kami</a></li>
+                <li><a href="#membership" className="text-white/70 hover:text-white transition-colors">Membership</a></li>
+                <li><a href="#faq" className="text-white/70 hover:text-white transition-colors">FAQ</a></li>
               </ul>
             </div>
 

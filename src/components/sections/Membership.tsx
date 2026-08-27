@@ -1,0 +1,395 @@
+'use client';
+
+import type { CSSProperties } from "react";
+import { useState } from "react";
+import { colors } from "@lib/color";
+
+const MEMBERSHIP_PLANS = [
+  {
+    name: "Personal Membership",
+    shortName: "Personal",
+    fee: "IDR 750,000",
+    validity: "1 year",
+    description: "Untuk profesional, founder, dan individu yang ingin aktif membangun jejaring lintas batas.",
+    audience: "Best for professionals",
+    cta: "Join as Personal",
+    accent: "#a5dded",
+  },
+  {
+    name: "Corporate Membership",
+    shortName: "Corporate",
+    fee: "IDR 5,000,000",
+    validity: "1 year",
+    description: "Untuk perusahaan yang ingin memperluas eksposur, koneksi bisnis, dan peluang kolaborasi.",
+    audience: "Best for companies",
+    cta: "Join as Corporate",
+    featured: true,
+    accent: "#053f5c",
+  },
+  {
+    name: "Sponsor Membership",
+    shortName: "Sponsor",
+    fee: "Based on sponsorship opportunity",
+    validity: "1 year",
+    description: "Untuk brand atau partner yang ingin mendukung kegiatan VIS Society secara strategis.",
+    audience: "Best for brand partners",
+    cta: "Discuss Sponsorship",
+    accent: "#e6f7fb",
+  },
+];
+
+const MEMBERSHIP_BENEFITS = [
+  {
+    benefit: "Member Visibility",
+    value: "Profile exposure through VIS media",
+    type: "All Membership Types",
+    note: "Tampil lebih sering di kanal komunitas.",
+  },
+  {
+    benefit: "Transparency",
+    value: "Access to financial & membership reports",
+    type: "All Membership Types",
+    note: "Akses informasi komunitas yang lebih terbuka.",
+  },
+  {
+    benefit: "Business Intelligence",
+    value: "Access to business opportunities & promotional information",
+    type: "All Membership Types",
+    note: "Insight peluang dan promosi yang relevan.",
+  },
+  {
+    benefit: "Networking Access",
+    value: "Free access to VIS monthly meetings",
+    type: "All Membership Types",
+    note: "Masuk ke ruang temu rutin VIS Society.",
+  },
+  {
+    benefit: "Corporate Exposure",
+    value: "Opportunities to promote products/services during selected VIS activities",
+    type: "Corporate Membership",
+    note: "Benefit eksklusif untuk meningkatkan exposure bisnis.",
+    featured: true,
+  },
+];
+
+const PLAN_HIGHLIGHTS = [
+  "Monthly meeting access",
+  "Cross-border network",
+  "Business opportunity updates",
+];
+
+const Y_OFFSETS = [0, 80, 135];
+
+export default function MembershipSection() {
+  const [activePlan, setActivePlan] = useState(1);
+  const selectedPlan = MEMBERSHIP_PLANS[activePlan];
+  const [activeBenefit, setActiveBenefit] = useState(0);
+
+  const nextBenefit = () => {
+    setActiveBenefit((prev) => (prev + 1) % MEMBERSHIP_BENEFITS.length);
+  };
+
+  const prevBenefit = () => {
+    setActiveBenefit((prev) => (prev - 1 + MEMBERSHIP_BENEFITS.length) % MEMBERSHIP_BENEFITS.length);
+  };
+
+  return (
+    <section id="membership" className="py-16 md:py-24 px-4 md:px-8 bg-[#eef6f8]">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-[0.82fr_1.18fr] gap-8 md:gap-12 mb-12">
+          <div className="lg:pt-6">
+            <h2 className="text-xs font-bold tracking-widest uppercase mb-4 inline-flex rounded-full px-4 py-2 bg-white border border-slate-200" style={{ color: colors.primary }}>
+              VIS Society Membership
+            </h2>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-black mb-5">
+              Buka akses ke network, exposure, dan peluang bisnis lintas batas.
+            </h3>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              Pilih membership yang paling pas untuk targetmu. Setiap paket berlaku satu tahun dan dirancang untuk membuat koneksi bisnis lebih mudah berubah menjadi kolaborasi nyata.
+            </p>
+            <div className="mt-7 grid grid-cols-3 gap-3 max-w-lg">
+              <div className="rounded-xl bg-white p-4 border border-slate-200">
+                <p className="text-2xl font-bold" style={{ color: colors.primary }}>47+</p>
+                <p className="text-xs text-gray-500">Anggota</p>
+              </div>
+              <div className="rounded-xl bg-white p-4 border border-slate-200">
+                <p className="text-2xl font-bold" style={{ color: colors.primary }}>3</p>
+                <p className="text-xs text-gray-500">Negara</p>
+              </div>
+              <div className="rounded-xl bg-white p-4 border border-slate-200">
+                <p className="text-2xl font-bold" style={{ color: colors.primary }}>1 year</p>
+                <p className="text-xs text-gray-500">Validity</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-[1fr_0.9fr] gap-5 md:gap-6 items-stretch">
+            <div className="md:hidden">
+              <div className="grid grid-cols-3 gap-2 rounded-xl bg-white p-2 border border-gray-200 shadow-sm">
+                {MEMBERSHIP_PLANS.map((plan, index) => {
+                  const isActive = activePlan === index;
+
+                  return (
+                    <button
+                      type="button"
+                      key={plan.name}
+                      aria-pressed={isActive}
+                      onClick={() => setActivePlan(index)}
+                      className={`rounded-lg px-2 py-3 text-xs font-bold leading-tight transition-all ${
+                        isActive ? "text-white shadow-md" : "text-gray-600"
+                      }`}
+                      style={{
+                        backgroundColor: isActive ? colors.primary : "#f8fafc",
+                      }}
+                    >
+                      {plan.shortName}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="hidden md:block relative min-h-[450px]">
+              {MEMBERSHIP_PLANS.map((plan, index) => {
+                const isActive = activePlan === index;
+                const stackOffset = index - activePlan;
+
+                return (
+                  <button
+                    type="button"
+                    aria-pressed={isActive}
+                    onClick={() => setActivePlan(index)}
+                    key={plan.name}
+                    className="w-full text-left rounded-2xl p-6 border flex flex-col min-h-[270px] transition-all duration-500 ease-in-out md:absolute md:inset-x-0 md:[transform:translateY(var(--stack-y))_rotate(var(--stack-rotate))_scale(var(--stack-scale))] focus:outline-none focus:ring-2 focus:ring-offset-2 mb-5 md:mb-0"
+                    style={{
+                      backgroundColor: isActive ? colors.primary : "#ffffff",
+                      borderColor: isActive ? colors.primary : "#e5e7eb",
+                      boxShadow: isActive ? "0 28px 60px rgba(5, 63, 92, 0.28)" : "0 10px 28px rgba(15, 23, 42, 0.08)",
+                      zIndex: isActive ? 30 : 10 - Math.abs(stackOffset),
+                      transformOrigin: "center top",
+                      "--tw-ring-color": colors.secondary,
+                      "--stack-y": `${Y_OFFSETS[index]}px`,
+                      "--stack-rotate": `${stackOffset * -2.5}deg`,
+                      "--stack-scale": isActive ? 1 : 0.95,
+                    } as CSSProperties & Record<string, string | number>}
+                  >
+                    <div className="flex items-start justify-between gap-4 mb-8">
+                      <div>
+                        <p className={`text-sm font-semibold mb-3 ${isActive ? "text-white/75" : "text-gray-500"}`}>
+                          {plan.audience}
+                        </p>
+                        <h4 className={`text-xl md:text-2xl font-bold leading-tight ${isActive ? "text-white" : "text-black"}`}>
+                          {plan.name}
+                        </h4>
+                      </div>
+                      <span
+                        className={`rounded-full px-3 py-1 text-xs font-semibold ${isActive ? "bg-white/15 text-white" : "text-gray-500"}`}
+                      >
+                        {isActive ? "Selected" : "View"}
+                      </span>
+                    </div>
+
+                    <div className="mt-auto">
+                      <p className={`text-2xl md:text-3xl font-bold mb-4 ${isActive ? "text-white" : "text-black"}`}>
+                        {plan.fee}
+                      </p>
+                      <p className={`text-sm leading-relaxed ${isActive ? "text-white/80" : "text-gray-600"}`}>
+                        {plan.description}
+                      </p>
+                      {isActive && (
+                        <p className="mt-5 text-sm font-bold text-white">
+                          Tap to explore benefits
+                        </p>
+                      )}
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            <article
+              className="rounded-2xl border p-6 md:p-7 min-h-[360px] flex flex-col justify-between shadow-xl shadow-slate-200/70"
+              style={{ backgroundColor: "#ffffff", borderColor: "#d7e2e8" }}
+            >
+              <div>
+                <p className="text-xs md:text-sm font-bold uppercase tracking-widest mb-3" style={{ color: colors.primary }}>
+                  Selected Membership
+                </p>
+                <h4 className="text-2xl md:text-2xl font-bold text-black mb-4">{selectedPlan.name}</h4>
+                <p className="text-3xl md:text-3xl font-bold text-black mb-5 leading-tight">{selectedPlan.fee}</p>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{selectedPlan.description}</p>
+
+                <div className="mt-6 space-y-3">
+                  {PLAN_HIGHLIGHTS.map((highlight) => (
+                    <div key={highlight} className="flex items-center gap-3 text-sm font-medium text-gray-700">
+                      <span
+                        className="h-6 w-6 rounded-full flex items-center justify-center text-xs font-bold bg-slate-100"
+                        style={{ color: colors.primary }}
+                      >
+                        +
+                      </span>
+                      {highlight}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-8 grid gap-3">
+                <div
+                  className={`rounded-xl p-4 border ${
+                    selectedPlan.featured ? "border-transparent" : "bg-gray-50 border-gray-100"
+                  }`}
+                  style={{
+                    backgroundColor: selectedPlan.featured ? colors.primary : undefined,
+                  }}
+                >
+                  <p
+                    className="text-xs font-bold uppercase tracking-widest mb-1"
+                    style={{ color: selectedPlan.featured ? "#ffffff" : colors.primary }}
+                  >
+                    Validity
+                  </p>
+                  <p className={`text-lg font-bold ${selectedPlan.featured ? "text-white" : "text-black"}`}>
+                    {selectedPlan.validity}
+                  </p>
+                </div>
+                <a
+                  href="https://wa.me/628217601818"
+                  className="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: colors.primary }}
+                >
+                  {selectedPlan.cta}
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div className="bg-transparent border-transparent shadow-none md:bg-white md:rounded-2xl md:border md:border-gray-200 p-0 md:p-8 md:shadow-sm">
+          <div className="max-w-3xl mb-4 md:mb-8">
+            <div className="flex items-center justify-between gap-4 mb-2">
+              <h4 className="text-xl md:text-2xl font-bold text-black">Benefit Membership</h4>
+            </div>
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed hidden sm:block">
+              Benefit utama yang membuat membership ini bernilai untuk relasi, eksposur, dan insight bisnis.
+            </p>
+          </div>
+
+          {/* Mobile view */}
+          <div className="md:hidden">
+            {/* Card Container */}
+            {(() => {
+              const item = MEMBERSHIP_BENEFITS[activeBenefit];
+              return (
+                <article className="w-full rounded-xl border border-[#e8eef2] bg-white px-5 py-5 shadow-[0_6px_18px_rgba(15,23,42,0.04)]">
+                  <div className="flex min-h-[130px] flex-col">
+                    <div className="flex items-start justify-between gap-3 mb-4">
+                      <h5 className="text-base font-bold text-black leading-tight">{item.benefit}</h5>
+                      <span
+                        className={`mt-0.5 rounded-full px-2.5 py-0.5 text-[10px] font-bold whitespace-nowrap ${
+                          item.featured ? "text-white" : "text-slate-500"
+                        }`}
+                        style={{
+                          backgroundColor: item.featured ? colors.primary : "#f8fafc",
+                        }}
+                      >
+                        {item.featured ? "Corporate" : "Included"}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">{item.value}</p>
+                    <p className="mt-auto text-xs text-gray-500 leading-relaxed">
+                      {item.note}
+                    </p>
+                  </div>
+                </article>
+              );
+            })()}
+
+            {/* Pagination & Navigation Row */}
+            <div className="flex items-center justify-center gap-6 mt-5">
+              <button
+                type="button"
+                onClick={prevBenefit}
+                className="h-8 w-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-100 shadow-sm transition-all focus:outline-none"
+                aria-label="Previous benefit"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+              </button>
+
+              <div className="flex gap-2">
+                {MEMBERSHIP_BENEFITS.map((_, idx) => (
+                  <button
+                    type="button"
+                    key={idx}
+                    onClick={() => setActiveBenefit(idx)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      activeBenefit === idx ? "w-6" : "w-2"
+                    }`}
+                    style={{
+                      backgroundColor: activeBenefit === idx ? colors.primary : "#cbd5e1",
+                    }}
+                    aria-label={`Go to benefit ${idx + 1}`}
+                  />
+                ))}
+              </div>
+
+              <button
+                type="button"
+                onClick={nextBenefit}
+                className="h-8 w-8 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 active:bg-slate-100 shadow-sm transition-all focus:outline-none"
+                aria-label="Next benefit"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-5 gap-3 md:gap-4">
+            {MEMBERSHIP_BENEFITS.map((item) => (
+              <article
+                key={item.benefit}
+                className="group rounded-2xl border border-[#e8eef2] bg-white p-5 min-h-[260px] flex flex-col text-left shadow-[0_8px_24px_rgba(15,23,42,0.04)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#053f5c] hover:bg-[#053f5c] hover:shadow-[0_18px_42px_rgba(5,63,92,0.18)]"
+              >
+                <div className="flex items-center justify-end gap-3 mb-6">
+                  <span
+                    className={`rounded-full px-3 py-1 text-[11px] font-bold transition-colors duration-300 ease-out group-hover:bg-white group-hover:text-[#053f5c] ${
+                      item.featured ? "bg-white text-[#053f5c]" : "bg-[#f8fafc] text-slate-500"
+                    }`}
+                  >
+                    {item.featured ? "Corporate" : "Included"}
+                  </span>
+                </div>
+
+                <h5 className="text-lg font-bold mb-3 leading-tight text-black transition-colors duration-300 ease-out group-hover:text-white">
+                  {item.benefit}
+                </h5>
+                <p className="text-sm leading-relaxed mb-5 text-gray-600 transition-colors duration-300 ease-out group-hover:text-white/80">
+                  {item.value}
+                </p>
+
+                <div className="mt-auto border-t border-slate-100 pt-4 transition-colors duration-300 ease-out group-hover:border-white/15">
+                  <p className="text-sm leading-relaxed mb-4 text-gray-500 transition-colors duration-300 ease-out group-hover:text-white/75">
+                    {item.note}
+                  </p>
+                  <span
+                    className="inline-flex rounded-full px-3 py-1 text-xs font-semibold transition-colors duration-300 ease-out group-hover:bg-white group-hover:text-[#053f5c]"
+                    style={{
+                      backgroundColor: item.featured ? colors.primary : "#eef6f8",
+                      color: item.featured ? "#ffffff" : colors.primary,
+                    }}
+                  >
+                    {item.type}
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
