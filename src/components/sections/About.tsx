@@ -290,11 +290,8 @@ export default function AboutSection() {
             </div>
 
             {/* Horizontal connector lines between leadership */}
-            <div className="hidden md:flex items-center justify-center w-full max-w-3xl mb-6 relative h-12">
-              {/* Left line from co-founder to center */}
-              <div className="absolute left-[12%] h-px flex-1" style={{ backgroundColor: connectorColor }}></div>
-              {/* Right line from center to co-founder */}
-              <div className="absolute right-[12%] h-px flex-1" style={{ backgroundColor: connectorColor }}></div>
+            <div className="hidden md:flex items-center justify-center w-full mb-4 relative" style={{ height: '2px' }}>
+              <div className="w-3/4 h-px" style={{ backgroundColor: connectorColor }}></div>
             </div>
 
             {/* Divider after leadership */}
