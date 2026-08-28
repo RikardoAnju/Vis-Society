@@ -36,11 +36,11 @@ export default function Home() {
             {/* Brand */}
             <ScrollReveal animation="slide-up" delay={50} className="col-span-2 md:col-span-1">
               <Image
-                src="/img/vis_logo.png"
+                src="/img/vis_logo.svg"
                 alt={SITE_NAME}
                 width={56}
                 height={56}
-                className="h-14 w-auto mb-4 brightness-0 invert"
+                className="h-14 w-14 mb-4 brightness-0 invert"
               />
               <p className="text-white/70 text-sm leading-relaxed max-w-xs">
                 {t("footer.desc")}
