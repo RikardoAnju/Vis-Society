@@ -289,19 +289,6 @@ export default function AboutSection() {
               </ScrollReveal>
             </div>
 
-            {/* Horizontal connector lines between leadership */}
-            <div className="hidden md:flex items-center justify-center w-full relative z-10" style={{ marginTop: '-100px', marginBottom: '80px', height: '0' }}>
-              <div className="flex items-center justify-center w-full max-w-4xl h-0">
-                {/* Full horizontal line connecting all three */}
-                <div style={{
-                  width: '100%',
-                  height: '4px',
-                  backgroundColor: '#10b981',
-                  maxWidth: '900px'
-                }}></div>
-              </div>
-            </div>
-
             {/* Divider after leadership */}
             <div className="flex flex-col items-center w-full">
               {/* Vertical line down to Ketua Harian */}
