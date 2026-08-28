@@ -62,7 +62,7 @@ const LEADERSHIP_TEAM = (t: (key: TranslationKey) => string) => ({
       role: t("about.org.roleCoFounder"),
       image: "/img/leadership/muga-prasada-bhakti.webp",
       alt: "Potret Dr. Muga Prasada Bhakti",
-      imagePosition: "center 16%",
+      imagePosition: "center 35%",
       cardWidth: "w-52 md:w-56",
       imageSize: "h-24 w-24 md:h-28 md:w-28"
     },
@@ -223,38 +223,32 @@ export default function AboutSection() {
           {/* Org Tree Visualization */}
           <div className="flex flex-col items-center">
             {/* Top Leadership - Founder with Co-founders on left/right */}
-            <div className="flex flex-col items-center w-full">
-              {/* Co-Founders on mobile stack, desktop flex row */}
-              <ScrollReveal animation="slide-up" delay={100} className="w-full">
-                <div className="flex gap-4 md:gap-8 flex-col md:flex-row justify-center items-center md:items-flex-end mb-8 md:mb-0">
-                  {leadership.coFounders.map((person, idx) => (
-                    <div
-                      key={person.name}
-                      className={`${person.cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}
-                    >
-                      <div className={`relative ${person.imageSize} overflow-hidden rounded-full border-[3px] shadow-md bg-slate-100`} style={{ borderColor: colors.primary }}>
-                        <Image
-                          src={person.image}
-                          alt={person.alt}
-                          fill
-                          sizes="(max-width: 768px) 7rem, 8rem"
-                          className="object-cover"
-                          style={{ objectPosition: person.imagePosition }}
-                        />
-                      </div>
-                      <div className="pt-3">
-                        <p className="font-bold text-[15px] leading-snug text-slate-900">{person.name}</p>
-                        <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-[0.16em]">{person.role}</p>
-                      </div>
-                    </div>
-                  ))}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full mb-8">
+              {/* Co-Founders and Ketua Umum in same row on desktop */}
+              <ScrollReveal animation="slide-up" delay={100} className="flex flex-col items-center">
+                {/* First Co-Founder */}
+                <div className={`${leadership.coFounders[0].cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}>
+                  <div className={`relative ${leadership.coFounders[0].imageSize} overflow-hidden rounded-full border-[3px] shadow-md bg-slate-100`} style={{ borderColor: colors.primary }}>
+                    <Image
+                      src={leadership.coFounders[0].image}
+                      alt={leadership.coFounders[0].alt}
+                      fill
+                      sizes="(max-width: 768px) 7rem, 8rem"
+                      className="object-cover"
+                      style={{ objectPosition: leadership.coFounders[0].imagePosition }}
+                    />
+                  </div>
+                  <div className="pt-3">
+                    <p className="font-bold text-[15px] leading-snug text-slate-900">{leadership.coFounders[0].name}</p>
+                    <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-[0.16em]">{leadership.coFounders[0].role}</p>
+                  </div>
                 </div>
               </ScrollReveal>
 
               {/* Ketua Umum - Center between co-founders */}
-              <ScrollReveal animation="slide-up" delay={150}>
+              <ScrollReveal animation="slide-up" delay={150} className="flex flex-col items-center">
                 <div
-                  className={`${leadership.ketuaUmum.cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300 md:mb-4`}
+                  className={`${leadership.ketuaUmum.cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}
                 >
                   <div className={`relative ${leadership.ketuaUmum.imageSize} overflow-hidden rounded-full border-4 shadow-lg bg-slate-100`} style={{ borderColor: colors.primary }}>
                       <Image
@@ -274,8 +268,39 @@ export default function AboutSection() {
                 </div>
               </ScrollReveal>
 
-              {/* Connector line */}
-              <div className="w-px h-7 mt-4" style={{ backgroundColor: connectorColor }}></div>
+              {/* Second Co-Founder */}
+              <ScrollReveal animation="slide-up" delay={200} className="flex flex-col items-center">
+                <div className={`${leadership.coFounders[1].cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}>
+                  <div className={`relative ${leadership.coFounders[1].imageSize} overflow-hidden rounded-full border-[3px] shadow-md bg-slate-100`} style={{ borderColor: colors.primary }}>
+                    <Image
+                      src={leadership.coFounders[1].image}
+                      alt={leadership.coFounders[1].alt}
+                      fill
+                      sizes="(max-width: 768px) 7rem, 8rem"
+                      className="object-cover"
+                      style={{ objectPosition: leadership.coFounders[1].imagePosition }}
+                    />
+                  </div>
+                  <div className="pt-3">
+                    <p className="font-bold text-[15px] leading-snug text-slate-900">{leadership.coFounders[1].name}</p>
+                    <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-[0.16em]">{leadership.coFounders[1].role}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Horizontal connector lines between leadership */}
+            <div className="hidden md:flex items-center justify-center w-full max-w-3xl mb-6 relative h-12">
+              {/* Left line from co-founder to center */}
+              <div className="absolute left-[12%] h-px flex-1" style={{ backgroundColor: connectorColor }}></div>
+              {/* Right line from center to co-founder */}
+              <div className="absolute right-[12%] h-px flex-1" style={{ backgroundColor: connectorColor }}></div>
+            </div>
+
+            {/* Divider after leadership */}
+            <div className="flex flex-col items-center w-full">
+              {/* Vertical line down to Ketua Harian */}
+              <div className="w-px h-6" style={{ backgroundColor: connectorColor }}></div>
 
               {/* Ketua Harian */}
               <ScrollReveal animation="slide-up" delay={300}>
