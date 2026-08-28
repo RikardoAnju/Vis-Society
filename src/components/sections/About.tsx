@@ -77,7 +77,7 @@ const LEADERSHIP_TEAM = (t: (key: TranslationKey) => string) => ({
     }
   ],
   ketuaHarian: {
-    name: "Antonius Marco Lombardo",
+    name: "Antonius Mario Lombardi",
     role: t("about.org.roleKetuaHarian"),
     cardWidth: "w-64 md:w-72"
   }
@@ -222,12 +222,39 @@ export default function AboutSection() {
 
           {/* Org Tree Visualization */}
           <div className="flex flex-col items-center">
-            {/* Top Leadership */}
-            <div className="flex flex-col items-center">
-              {/* Ketua Umum */}
-              <ScrollReveal animation="slide-up">
+            {/* Top Leadership - Founder with Co-founders on left/right */}
+            <div className="flex flex-col items-center w-full">
+              {/* Co-Founders on mobile stack, desktop flex row */}
+              <ScrollReveal animation="slide-up" delay={100} className="w-full">
+                <div className="flex gap-4 md:gap-8 flex-col md:flex-row justify-center items-center md:items-flex-end mb-8 md:mb-0">
+                  {leadership.coFounders.map((person, idx) => (
+                    <div
+                      key={person.name}
+                      className={`${person.cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}
+                    >
+                      <div className={`relative ${person.imageSize} overflow-hidden rounded-full border-[3px] shadow-md bg-slate-100`} style={{ borderColor: colors.primary }}>
+                        <Image
+                          src={person.image}
+                          alt={person.alt}
+                          fill
+                          sizes="(max-width: 768px) 7rem, 8rem"
+                          className="object-cover"
+                          style={{ objectPosition: person.imagePosition }}
+                        />
+                      </div>
+                      <div className="pt-3">
+                        <p className="font-bold text-[15px] leading-snug text-slate-900">{person.name}</p>
+                        <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-[0.16em]">{person.role}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+
+              {/* Ketua Umum - Center between co-founders */}
+              <ScrollReveal animation="slide-up" delay={150}>
                 <div
-                  className={`${leadership.ketuaUmum.cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}
+                  className={`${leadership.ketuaUmum.cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300 md:mb-4`}
                 >
                   <div className={`relative ${leadership.ketuaUmum.imageSize} overflow-hidden rounded-full border-4 shadow-lg bg-slate-100`} style={{ borderColor: colors.primary }}>
                       <Image
@@ -236,6 +263,7 @@ export default function AboutSection() {
                         fill
                         sizes="(max-width: 768px) 8rem, 9rem"
                         className="object-cover"
+                        priority
                         style={{ objectPosition: leadership.ketuaUmum.imagePosition }}
                       />
                   </div>
@@ -247,45 +275,7 @@ export default function AboutSection() {
               </ScrollReveal>
 
               {/* Connector line */}
-              <div className="w-px h-6" style={{ backgroundColor: connectorColor }}></div>
-
-              {/* Co Founders */}
-              <ScrollReveal animation="slide-up" delay={150} className="flex flex-col items-center relative">
-                <div className="hidden md:flex flex-col items-center w-full max-w-[34rem] mb-5">
-                  <div className="h-5 w-px" style={{ backgroundColor: connectorColor }}></div>
-                  <div className="h-px w-[16rem]" style={{ backgroundColor: connectorColor }}></div>
-                </div>
-                <div className="flex gap-4 md:gap-12 flex-wrap justify-center items-center flex-col md:flex-row">
-                  {leadership.coFounders.map((person) => (
-                    <div
-                      key={person.name}
-                      className={`${person.cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}
-                    >
-                        <div className="hidden md:block h-5 w-px" style={{ backgroundColor: connectorColor }}></div>
-                        <div className={`relative ${person.imageSize} overflow-hidden rounded-full border-[3px] shadow-md bg-slate-100`} style={{ borderColor: colors.primary }}>
-                          <Image
-                            src={person.image}
-                            alt={person.alt}
-                            fill
-                            sizes="(max-width: 768px) 7rem, 8rem"
-                            className="object-cover"
-                            style={{ objectPosition: person.imagePosition }}
-                          />
-                        </div>
-                      <div className="pt-3">
-                        <p className="font-bold text-[15px] leading-snug text-slate-900">{person.name}</p>
-                        <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-[0.16em]">{person.role}</p>
-                      </div>
-                    </div>
-                  ))}
-                  
-                  {/* Vertical connector line between Co-Founders ONLY on mobile when they stack */}
-                  <div className="w-px h-5 md:hidden" style={{ backgroundColor: connectorColor }}></div>
-                </div>
-              </ScrollReveal>
-
-              {/* Connector line */}
-              <div className="w-px h-7" style={{ backgroundColor: connectorColor }}></div>
+              <div className="w-px h-7 mt-4" style={{ backgroundColor: connectorColor }}></div>
 
               {/* Ketua Harian */}
               <ScrollReveal animation="slide-up" delay={300}>
