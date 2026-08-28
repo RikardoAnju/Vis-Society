@@ -45,7 +45,7 @@ export const translations = {
         title: "Core Values",
         text1: "Filosofi Akuarium (Aquarium Philosophy)",
         text2: " — sebuah ekosistem yang terkendali dan tepercaya di mana para profesional berinteraksi di dalam lingkungan yang terkurasi.",
-        text3: "Pendekatan ini mendorong terciptanya rasa saling percaya, akuntabilitas, integritas profesional, dan kolaborasi jangka panjang, sekaligus menjaga kualitas serta keterikatan (*engagement*) yang bermakna di antara para anggota."
+        text3: "Pendekatan ini mendorong terciptanya rasa saling percaya, akuntabilitas, integritas profesional, dan kolaborasi jangka panjang, sekaligus menjaga kualitas serta keterikatan (engagement) yang bermakna di antara para anggota."
       },
       org: {
         label: "Struktur Organisasi",

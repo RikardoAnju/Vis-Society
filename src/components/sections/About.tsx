@@ -310,12 +310,12 @@ export default function AboutSection() {
               <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 justify-items-center relative">
                 {departments.map((dept, idx) => (
                   <ScrollReveal key={idx} animation="slide-up" delay={idx * 100 + 100} className="w-full max-w-[290px] md:max-w-none flex flex-col items-center">
-                    <div className="p-5 bg-slate-50/50 rounded-2xl border border-slate-100/80 md:bg-transparent md:border-0 md:p-0 w-full flex flex-col items-center">
+                    <div className="px-4 py-2 md:p-0 w-full flex flex-col items-center">
                       {/* Vertical line from connector to department head on desktop */}
                       <div className="w-px h-6 hidden md:block" style={{ backgroundColor: connectorColor }}></div>
 
                       {/* Department Header/Title */}
-                      <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 md:mt-2 text-center">
+                      <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-3 md:mt-2 text-center">
                         {dept.title === "Registrasi & Keanggotaan" && t("about.org.roleKetuaUmum") === "General Chairman" 
                           ? "Registration & Membership"
                           : dept.title === "Hubungan Internasional" && t("about.org.roleKetuaUmum") === "General Chairman"
