@@ -290,21 +290,14 @@ export default function AboutSection() {
             </div>
 
             {/* Horizontal connector lines between leadership */}
-            <div className="hidden md:flex items-center justify-center w-full mb-6 mt-[-40px] relative z-0">
-              <div className="flex items-center justify-center w-full max-w-4xl">
-                {/* Left connecting line */}
+            <div className="hidden md:flex items-center justify-center w-full relative z-10" style={{ marginTop: '-100px', marginBottom: '80px', height: '0' }}>
+              <div className="flex items-center justify-center w-full max-w-4xl h-0">
+                {/* Full horizontal line connecting all three */}
                 <div style={{
-                  flex: 1,
-                  height: '3px',
+                  width: '100%',
+                  height: '4px',
                   backgroundColor: '#10b981',
-                  margin: '0 10px'
-                }}></div>
-                {/* Right connecting line */}
-                <div style={{
-                  flex: 1,
-                  height: '3px',
-                  backgroundColor: '#10b981',
-                  margin: '0 10px'
+                  maxWidth: '900px'
                 }}></div>
               </div>
             </div>
