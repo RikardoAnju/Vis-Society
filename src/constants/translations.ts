@@ -178,6 +178,21 @@ export const translations = {
         title: "Serah Terima Plakat Apresiasi Kepada Pembicara Spesial Triwulan",
         date: "10 Juni 2026",
         excerpt: "Sebagai bentuk penghargaan atas kontribusi pengetahuan yang diberikan, dewan pengurus Vis Society menyerahkan plakat apresiasi kepada perwakilan..."
+      },
+      a4: {
+        title: "Batam Bidik Gelombang Investasi Baru dari Negara Tetangga",
+        date: "14 Agustus 2026",
+        excerpt: "Pemberitaan Batam Pos menyoroti peluang arus investasi baru dari negara tetangga dan relevansinya bagi penguatan jejaring bisnis lintas batas di Batam..."
+      },
+      a5: {
+        title: "Sorotan Reel Batam Pos tentang Dinamika Jejaring Bisnis Batam",
+        date: "Instagram Batam Pos",
+        excerpt: "Konten reel Batam Pos ini menampilkan sorotan singkat seputar atmosfer pertumbuhan bisnis dan jaringan kolaborasi yang semakin aktif di Batam..."
+      },
+      a6: {
+        title: "Publikasi Instagram Batam Pos tentang Aktivitas dan Kolaborasi",
+        date: "Instagram Batam Pos",
+        excerpt: "Post Instagram Batam Pos ini dapat menjadi rujukan tambahan untuk memperkuat bagian berita dan eksposur publik terhadap aktivitas komunitas serta kolaborasi regional..."
       }
     }
   },
@@ -360,6 +375,21 @@ export const translations = {
         title: "Plaque Handover Appreciation to Quarterly Special Speaker",
         date: "June 10, 2026",
         excerpt: "As a form of appreciation for the knowledge contribution provided, the board of Vis Society presented an appreciation plaque to the representative..."
+      },
+      a4: {
+        title: "Batam Eyes a New Wave of Investment from Neighboring Countries",
+        date: "August 14, 2026",
+        excerpt: "This Batam Pos coverage highlights the opportunity for a new wave of investment from neighboring countries and its relevance to strengthening cross-border business networks in Batam..."
+      },
+      a5: {
+        title: "Batam Pos Reel Spotlight on Batam's Business Network Momentum",
+        date: "Batam Pos Instagram",
+        excerpt: "This Batam Pos reel offers a short social-media spotlight on the growing business climate and collaboration momentum developing in Batam..."
+      },
+      a6: {
+        title: "Batam Pos Instagram Post on Activity and Collaboration Highlights",
+        date: "Batam Pos Instagram",
+        excerpt: "This Batam Pos Instagram post serves as an additional public-facing reference for community activity and regional collaboration highlights..."
       }
     }
   }
@@ -398,4 +428,7 @@ export type TranslationKey =
   | "blog.label" | "blog.heading" | "blog.desc" | "blog.readMore"
   | "blog.a1.title" | "blog.a1.date" | "blog.a1.excerpt"
   | "blog.a2.title" | "blog.a2.date" | "blog.a2.excerpt"
-  | "blog.a3.title" | "blog.a3.date" | "blog.a3.excerpt";
+  | "blog.a3.title" | "blog.a3.date" | "blog.a3.excerpt"
+  | "blog.a4.title" | "blog.a4.date" | "blog.a4.excerpt"
+  | "blog.a5.title" | "blog.a5.date" | "blog.a5.excerpt"
+  | "blog.a6.title" | "blog.a6.date" | "blog.a6.excerpt";

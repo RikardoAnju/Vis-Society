@@ -10,28 +10,32 @@ export interface ArticleContent {
   excerptKey: TranslationKey;
   image: string;
   alt: string;
+  href?: string;
 }
 
 export const BLOG_ARTICLES: ArticleContent[] = [
   {
-    titleKey: "blog.a1.title",
-    dateKey: "blog.a1.date",
-    excerptKey: "blog.a1.excerpt",
-    image: "/img/FOTO MOU/mou-03.webp",
-    alt: "Penandatangan menunjukkan dokumen MOU kerja sama AI internasional",
+    titleKey: "blog.a4.title",
+    dateKey: "blog.a4.date",
+    excerptKey: "blog.a4.excerpt",
+    image: "/img/FOTO MOU/mou-01.webp",
+    alt: "Suasana pertemuan dan pembahasan peluang kerja sama regional",
+    href: "https://metropolis.batampos.co.id/batam-bidik-gelombang-investasi-baru-dari-negara-tetangga/",
   },
   {
-    titleKey: "blog.a2.title",
-    dateKey: "blog.a2.date",
-    excerptKey: "blog.a2.excerpt",
-    image: "/img/FOTO BERSAMA/bersama-09.webp",
-    alt: "Foto bersama peserta Batam Monthly Meeting Vis Society",
+    titleKey: "blog.a5.title",
+    dateKey: "blog.a5.date",
+    excerptKey: "blog.a5.excerpt",
+    image: "/img/FOTO BERSAMA/bersama-14.webp",
+    alt: "Cuplikan konten media sosial Batam Pos tentang kegiatan dan jejaring bisnis",
+    href: "https://www.instagram.com/reel/DbegNUGyfKr/?igsh=MXkxZWN0ZTkwZWhkdQ==",
   },
   {
-    titleKey: "blog.a3.title",
-    dateKey: "blog.a3.date",
-    excerptKey: "blog.a3.excerpt",
-    image: "/img/FOTO SERAH TERIMA PELAKAT/serah-terima-03.webp",
-    alt: "Serah terima plakat apresiasi kepada pembicara spesial triwulan",
+    titleKey: "blog.a6.title",
+    dateKey: "blog.a6.date",
+    excerptKey: "blog.a6.excerpt",
+    image: "/img/FOTO SERAH TERIMA PELAKAT/serah-terima-01.webp",
+    alt: "Publikasi media sosial Batam Pos tentang aktivitas komunitas dan kolaborasi",
+    href: "https://www.instagram.com/p/DaRkR4FmoDq/?igsh=MWg4NHdwdGxrZXRoaQ==",
   },
 ];

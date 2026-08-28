@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from "react";
 import Image from "next/image";
 import { colors } from "@lib/color";
 import { STATISTICS } from "@constants/index";
@@ -21,14 +20,14 @@ const ORG_DEPARTMENTS = (t: (key: TranslationKey) => string) => [
   {
     title: "Human Development",
     head: { name: "Yohanes Ad Purnomo", role: "Human Development" },
-    staff: []
+    staff: [
+      { name: "Michael Dimas", role: t("about.org.roleKetuaUmum") === "General Chairman" ? "HD Staff" : "Staf Human Development" }
+    ]
   },
   {
     title: "Hubungan Internasional",
     head: { name: "Bisa Mulia", role: t("about.org.roleKetuaUmum") === "General Chairman" ? "International Relations" : "Hubungan Internasional" },
-    staff: [
-      { name: "Michael Dimas", role: t("about.org.roleKetuaUmum") === "General Chairman" ? "IR Staff" : "Staf Hubungan Internasional" }
-    ]
+    staff: []
   },
   {
     title: "Sekretariat Jenderal",
@@ -47,10 +46,48 @@ const ORG_DEPARTMENTS = (t: (key: TranslationKey) => string) => [
   }
 ];
 
+const LEADERSHIP_TEAM = (t: (key: TranslationKey) => string) => ({
+  ketuaUmum: {
+    name: "Enriqo Moreno, SE, MBA",
+    role: t("about.org.roleKetuaUmum"),
+    image: "/img/leadership/enriqo-moreno.webp",
+    alt: "Potret Enriqo Moreno",
+    imagePosition: "center 18%",
+    cardWidth: "w-56 md:w-64",
+    imageSize: "h-28 w-28 md:h-32 md:w-32"
+  },
+  coFounders: [
+    {
+      name: "Dr. Muga Prasada Bhakti, SH, MM, CBLC., CCD",
+      role: t("about.org.roleCoFounder"),
+      image: "/img/leadership/muga-prasada-bhakti.webp",
+      alt: "Potret Dr. Muga Prasada Bhakti",
+      imagePosition: "center 16%",
+      cardWidth: "w-52 md:w-56",
+      imageSize: "h-24 w-24 md:h-28 md:w-28"
+    },
+    {
+      name: "Ir. Y Seno Prakoso, Ar., M.T., IAI., AA",
+      role: t("about.org.roleCoFounder"),
+      image: "/img/leadership/y-seno-prakoso.webp",
+      alt: "Potret Ir. Y Seno Prakoso",
+      imagePosition: "center 20%",
+      cardWidth: "w-52 md:w-56",
+      imageSize: "h-24 w-24 md:h-28 md:w-28"
+    }
+  ],
+  ketuaHarian: {
+    name: "Antonius Marco Lombardo",
+    role: t("about.org.roleKetuaHarian"),
+    cardWidth: "w-64 md:w-72"
+  }
+});
+
 export default function AboutSection() {
-  const [showModal, setShowModal] = useState(false);
   const { t } = useLanguage();
   const departments = ORG_DEPARTMENTS(t);
+  const leadership = LEADERSHIP_TEAM(t);
+  const connectorColor = "#94a3b8";
 
   return (
     <section id="about" className="py-16 md:py-24 px-4 md:px-8 bg-white">
@@ -181,17 +218,6 @@ export default function AboutSection() {
             <p className="text-base text-gray-600 max-w-2xl mx-auto mb-6">
               {t("about.org.desc")}
             </p>
-            <button
-              onClick={() => setShowModal(true)}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-semibold hover:bg-slate-50 transition-colors cursor-pointer"
-              style={{ color: colors.primary, borderColor: colors.primary }}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.644C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.437 0 .644C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              {t("about.org.imageBtn")}
-            </button>
           </ScrollReveal>
 
           {/* Org Tree Visualization */}
@@ -201,70 +227,92 @@ export default function AboutSection() {
               {/* Ketua Umum */}
               <ScrollReveal animation="slide-up">
                 <div
-                  className="text-white p-5 rounded-2xl shadow-lg w-64 md:w-64 text-center transition-transform hover:scale-[1.02] duration-300"
-                  style={{ backgroundColor: colors.primary }}
+                  className={`${leadership.ketuaUmum.cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}
                 >
-                  <p className="font-bold text-lg">Enrico Moreno</p>
-                  <p className="text-xs opacity-80 mt-1 uppercase tracking-wide">{t("about.org.roleKetuaUmum")}</p>
+                  <div className={`relative ${leadership.ketuaUmum.imageSize} overflow-hidden rounded-full border-4 shadow-lg bg-slate-100`} style={{ borderColor: colors.primary }}>
+                      <Image
+                        src={leadership.ketuaUmum.image}
+                        alt={leadership.ketuaUmum.alt}
+                        fill
+                        sizes="(max-width: 768px) 8rem, 9rem"
+                        className="object-cover"
+                        style={{ objectPosition: leadership.ketuaUmum.imagePosition }}
+                      />
+                  </div>
+                  <div className="pt-3">
+                    <p className="font-bold text-base md:text-lg leading-snug text-slate-900">{leadership.ketuaUmum.name}</p>
+                    <p className="text-[11px] text-slate-500 mt-1 uppercase tracking-[0.18em]">{leadership.ketuaUmum.role}</p>
+                  </div>
                 </div>
               </ScrollReveal>
 
               {/* Connector line */}
-              <div className="w-0.5 h-6 bg-slate-200"></div>
+              <div className="w-px h-6" style={{ backgroundColor: connectorColor }}></div>
 
               {/* Co Founders */}
               <ScrollReveal animation="slide-up" delay={150} className="flex flex-col items-center relative">
-                <div className="flex gap-4 md:gap-6 flex-wrap justify-center items-center flex-col md:flex-row">
-                  <div
-                    className="text-white p-4 rounded-2xl shadow-lg w-64 md:w-52 text-center transition-transform hover:scale-[1.02] duration-300"
-                    style={{ backgroundColor: colors.primary }}
-                  >
-                    <p className="font-bold text-sm">Muga Prasada Bhakti</p>
-                    <p className="text-[10px] opacity-80 mt-1 uppercase tracking-wide">{t("about.org.roleCoFounder")}</p>
-                  </div>
+                <div className="hidden md:flex flex-col items-center w-full max-w-[34rem] mb-5">
+                  <div className="h-5 w-px" style={{ backgroundColor: connectorColor }}></div>
+                  <div className="h-px w-[16rem]" style={{ backgroundColor: connectorColor }}></div>
+                </div>
+                <div className="flex gap-4 md:gap-12 flex-wrap justify-center items-center flex-col md:flex-row">
+                  {leadership.coFounders.map((person) => (
+                    <div
+                      key={person.name}
+                      className={`${person.cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}
+                    >
+                        <div className="hidden md:block h-5 w-px" style={{ backgroundColor: connectorColor }}></div>
+                        <div className={`relative ${person.imageSize} overflow-hidden rounded-full border-[3px] shadow-md bg-slate-100`} style={{ borderColor: colors.primary }}>
+                          <Image
+                            src={person.image}
+                            alt={person.alt}
+                            fill
+                            sizes="(max-width: 768px) 7rem, 8rem"
+                            className="object-cover"
+                            style={{ objectPosition: person.imagePosition }}
+                          />
+                        </div>
+                      <div className="pt-3">
+                        <p className="font-bold text-[15px] leading-snug text-slate-900">{person.name}</p>
+                        <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-[0.16em]">{person.role}</p>
+                      </div>
+                    </div>
+                  ))}
                   
                   {/* Vertical connector line between Co-Founders ONLY on mobile when they stack */}
-                  <div className="w-0.5 h-4 bg-slate-200 md:hidden"></div>
-
-                  <div
-                    className="text-white p-4 rounded-2xl shadow-lg w-64 md:w-52 text-center transition-transform hover:scale-[1.02] duration-300"
-                    style={{ backgroundColor: colors.primary }}
-                  >
-                    <p className="font-bold text-sm">Y Seno Prakoso</p>
-                    <p className="text-[10px] opacity-80 mt-1 uppercase tracking-wide">{t("about.org.roleCoFounder")}</p>
-                  </div>
+                  <div className="w-px h-5 md:hidden" style={{ backgroundColor: connectorColor }}></div>
                 </div>
               </ScrollReveal>
 
               {/* Connector line */}
-              <div className="w-0.5 h-6 bg-slate-200"></div>
+              <div className="w-px h-7" style={{ backgroundColor: connectorColor }}></div>
 
               {/* Ketua Harian */}
               <ScrollReveal animation="slide-up" delay={300}>
                 <div
-                  className="text-white p-5 rounded-2xl shadow-lg w-64 md:w-64 text-center transition-transform hover:scale-[1.02] duration-300"
+                  className={`${leadership.ketuaHarian.cardWidth} text-white p-5 rounded-2xl shadow-lg text-center transition-transform hover:scale-[1.02] duration-300`}
                   style={{ backgroundColor: colors.primary }}
                 >
-                  <p className="font-bold text-lg">Antonius Marco Lombardo</p>
-                  <p className="text-xs opacity-80 mt-1 uppercase tracking-wide">{t("about.org.roleKetuaHarian")}</p>
+                  <p className="font-bold text-lg">{leadership.ketuaHarian.name}</p>
+                  <p className="text-xs opacity-80 mt-1 uppercase tracking-wide">{leadership.ketuaHarian.role}</p>
                 </div>
               </ScrollReveal>
 
               {/* Connector line down to split */}
-              <div className="w-0.5 h-8 bg-slate-200"></div>
+              <div className="w-px h-8" style={{ backgroundColor: connectorColor }}></div>
             </div>
 
             {/* Departments Row */}
             <div className="w-full relative mt-2">
               {/* Horizontal Line connecting columns on desktop */}
-              <div className="absolute top-0 left-[10%] right-[10%] h-0.5 bg-slate-200 hidden md:block"></div>
+              <div className="absolute top-0 left-[10%] right-[10%] h-px hidden md:block" style={{ backgroundColor: connectorColor }}></div>
 
               <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 justify-items-center relative">
                 {departments.map((dept, idx) => (
                   <ScrollReveal key={idx} animation="slide-up" delay={idx * 100 + 100} className="w-full max-w-[290px] md:max-w-none flex flex-col items-center">
                     <div className="p-5 bg-slate-50/50 rounded-2xl border border-slate-100/80 md:bg-transparent md:border-0 md:p-0 w-full flex flex-col items-center">
                       {/* Vertical line from connector to department head on desktop */}
-                      <div className="w-0.5 h-6 bg-slate-200 hidden md:block"></div>
+                      <div className="w-px h-6 hidden md:block" style={{ backgroundColor: connectorColor }}></div>
 
                       {/* Department Header/Title */}
                       <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2 md:mt-2 text-center">
@@ -294,7 +342,7 @@ export default function AboutSection() {
                           {dept.staff.map((staff) => (
                             <div key={staff.name} className="flex flex-col items-center w-full">
                               {/* Vertical connector line */}
-                              <div className="w-0.5 h-4 bg-slate-200"></div>
+                              <div className="w-px h-4" style={{ backgroundColor: connectorColor }}></div>
 
                               {/* Staff Card */}
                               <div className="bg-white border border-slate-200 text-slate-800 p-3 rounded-lg shadow-sm w-full max-w-[170px] text-center hover:bg-slate-50 transition-colors duration-200">
@@ -358,39 +406,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Image Modal */}
-        {showModal && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 animate-fadeIn"
-            onClick={() => setShowModal(false)}
-          >
-            <div
-              className="relative max-w-5xl w-full max-h-[90vh] bg-white rounded-2xl p-2 overflow-hidden shadow-2xl flex flex-col"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex justify-between items-center p-3 border-b border-slate-100">
-                <h4 className="font-bold text-black text-sm md:text-base">{t("about.org.modalTitle")}</h4>
-                <button
-                  onClick={() => setShowModal(false)}
-                  className="p-1.5 rounded-full hover:bg-slate-100 transition-colors text-slate-500 hover:text-black cursor-pointer"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div className="relative flex-1 overflow-auto p-4 flex justify-center items-center bg-slate-50 min-h-[300px]">
-                <Image
-                  src="/img/struktur-organisasi-v2.jpg"
-                  alt="Bagan Struktur Organisasi Vis Society"
-                  width={1200}
-                  height={750}
-                  className="max-w-full max-h-[70vh] object-contain rounded-lg border border-slate-200"
-                />
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
