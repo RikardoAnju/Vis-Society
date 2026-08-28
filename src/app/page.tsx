@@ -38,9 +38,11 @@ export default function Home() {
               <Image
                 src="/img/vis_logo.png"
                 alt={SITE_NAME}
-                width={56}
-                height={56}
-                className="h-14 w-auto mb-4 brightness-0 invert"
+                width={80}
+                height={80}
+                className="h-20 w-auto mb-4 brightness-0 invert"
+                quality={100}
+                priority
               />
               <p className="text-white/70 text-sm leading-relaxed max-w-xs">
                 {t("footer.desc")}
