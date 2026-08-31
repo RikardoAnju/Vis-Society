@@ -23,7 +23,7 @@ export const PROGRAMS: ProgramContent[] = [
     scheduleKey: "program.monthly.schedule",
     descKey: "program.monthly.desc",
     image: "/img/FOTO BERSAMA/bersama-02.webp",
-    alt: "Pertemuan bulanan anggota Vis Society",
+    alt: "Pertemuan bulanan anggota VIS Society",
   },
   {
     badgeKey: "program.triwulan.badge",

@@ -92,6 +92,11 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
+                  <a href="mailto:info@vissociety.org" className="hover:text-white transition-colors">
+                    info@vissociety.org
+                  </a>
+                </li>
+                <li>
                   <a href="https://www.instagram.com/vis.society/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                     @vis.society
                   </a>
@@ -118,7 +123,7 @@ export default function Home() {
           </div>
 
           <ScrollReveal animation="fade-in" delay={450} className="pt-6 text-center">
-            <p className="text-white/50 text-sm">&copy; 2026 Vis Society. All rights reserved.</p>
+            <p className="text-white/50 text-sm">&copy; 2026 VIS Society. All rights reserved.</p>
           </ScrollReveal>
         </div>
       </footer>

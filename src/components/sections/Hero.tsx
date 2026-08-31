@@ -80,7 +80,7 @@ export default function HeroSection() {
         >
           <Image
             src="/img/FOTO BERSAMA/bersama-11-enhanced.png"
-            alt="Vis Society Community Gathering"
+            alt="VIS Society Community Gathering"
             fill
             quality={90}
             sizes="(max-width: 1280px) 92vw, 1216px"

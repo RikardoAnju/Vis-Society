@@ -1,4 +1,4 @@
-// Type definitions for Vis Society application
+// Type definitions for VIS Society application
 
 export interface NavLink {
   label: string;

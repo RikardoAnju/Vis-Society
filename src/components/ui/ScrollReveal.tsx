@@ -34,6 +34,10 @@ export default function ScrollReveal({
     const el = ref.current;
     if (!el) return;
 
+    if (typeof IntersectionObserver === 'undefined') {
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -49,11 +53,7 @@ export default function ScrollReveal({
     );
 
     observer.observe(el);
-    return () => {
-      if (el && !once) {
-        observer.unobserve(el);
-      }
-    };
+    return () => observer.disconnect();
   }, [threshold, once]);
 
   const animationClass = {
@@ -79,7 +79,7 @@ export default function ScrollReveal({
   return (
     <Component
       ref={ref}
-      className={`${className} ${isIntersecting ? animationClass : animation !== 'none' ? 'opacity-0' : ''}`}
+      className={`${className} ${isIntersecting ? animationClass : ''}`}
       style={mergedStyle}
     >
       {children}
