@@ -92,7 +92,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@vissociety.org" className="hover:text-white transition-colors">
+                  <a href="mailto:growthwithvis@gmail.com" className="hover:text-white transition-colors">
                     info@vissociety.org
                   </a>
                 </li>
