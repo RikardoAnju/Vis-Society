@@ -111,6 +111,10 @@ export default function Home() {
               </h5>
               <ul className="space-y-3.5 text-xs text-white/70">
                 <li>
+                  <strong className="text-white block text-sm font-semibold">{t("footer.aktaLabel")}</strong>
+                  <span className="font-mono mt-0.5 block text-white/90">No. 42, 22 Juni 2026</span>
+                </li>
+                <li>
                   <strong className="text-white block text-sm font-semibold">{t("footer.skLabel")}</strong>
                   <span className="font-mono mt-0.5 block text-white/90">AHU-0004449.AH.01.07.Tahun 2026</span>
                 </li>
