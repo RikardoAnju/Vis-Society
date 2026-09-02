@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   title: "VIS Society - Building Tomorrow's Sustainable Future",
   description: "VIS Society: Connecting business leaders, professionals, and entrepreneurs across Batam, Singapore, and Malaysia",
   icons: {
-    icon: "/icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "419x419" },
+    ],
+    apple: "/icon.png",
   },
 };
 
