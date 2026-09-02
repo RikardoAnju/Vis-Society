@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
 import { colors } from "@lib/color";
 import { useLanguage } from "@lib/LanguageContext";
 import ScrollReveal from "@components/ui/ScrollReveal";
@@ -74,12 +75,15 @@ export default function ProgramsSection() {
                     {t(prog.descKey)}
                   </p>
                 </div>
-                
-                {/* Bottom line decorator */}
-                <div className="mt-6 pt-4 border-t border-slate-50 flex items-center gap-2 text-xs font-bold" style={{ color: colors.primary }}>
+
+                <Link
+                  href={`/program/${prog.slug}`}
+                  className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold"
+                  style={{ color: colors.primary }}
+                >
                   <span>{t("program.detailBtn")}</span>
                   <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-                </div>
+                </Link>
               </div>
             </ScrollReveal>
           ))}

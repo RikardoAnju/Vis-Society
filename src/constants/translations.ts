@@ -69,23 +69,36 @@ export const translations = {
       desc: "Rangkaian pertemuan dan program berkala yang dirancang untuk mempererat koneksi, berbagi pengetahuan taktis, dan membuka jalur kolaborasi regional.",
       monthly: {
         badge: "Monthly",
-        title: "Pertemuan Bulanan",
-        schedule: "Rutin Setiap Bulan",
-        desc: "Kegiatan pertemuan bulanan dilakukan secara rutin dengan mengundang seluruh anggota VIS serta simpatisan atau calon anggota untuk membangun jejaring awal."
+        title: "Pertemuan Bulanan — Terhubung & Bertukar Wawasan",
+        schedule: "Setiap Bulan",
+        desc: "Pertemuan bulanan kami adalah gathering informal yang diadakan di berbagai kafe di Batam.",
+        detailTitle: "Pertemuan Bulanan — Terhubung & Bertukar Wawasan",
+        detailFocus: "Anggota didorong untuk mengajak rekan bisnis, kontak profesional, atau tamu relevan lainnya, sehingga tercipta lingkungan terbuka untuk networking dan membangun relasi.",
+        detailFormat: "Setiap pertemuan biasanya mencakup:\n\n- Perkenalan VIS Society\n- Berbagi pengetahuan dari anggota VIS\n- Networking dan diskusi informal\n- Informasi program dan kegiatan VIS mendatang",
+        detailOutcome: "Ini adalah cara sederhana untuk tetap terhubung, bertemu orang baru, dan menemukan peluang di dalam ekosistem VIS."
       },
       triwulan: {
-        badge: "Triwulan",
-        title: "Pertemuan Tematik & Expert",
-        schedule: "Setiap 3 Bulan",
-        desc: "Setiap 3 bulan, acara pertemuan VIS akan menghadirkan narasumber spesial, baik dari kalangan pemerintahan maupun ahli di bidang bisnis tertentu untuk berbagi wawasan mendalam."
+        badge: "Triwulan / Semester",
+        title: "Pertemuan Triwulanan / Semesteran — Belajar & Terlibat",
+        schedule: "Setiap 3 atau 6 Bulan",
+        desc: "Pertemuan triwulanan atau semesteran kami melanjutkan format gathering bulanan dengan fokus yang lebih kuat pada pengetahuan dan wawasan strategis.",
+        detailTitle: "Pertemuan Triwulanan / Semesteran — Belajar & Terlibat",
+        detailFocus: "Dalam sesi ini, VIS mengundang pembicara tamu dari institusi pemerintah terkait, pemimpin bisnis berpengalaman, atau profesional terkemuka untuk membagikan perspektif dan pengalaman mereka.",
+        detailFormat: "Sesi ini memberi anggota kesempatan untuk belajar langsung dari orang-orang dengan pengalaman praktis dan terlibat dalam diskusi yang bermakna.",
+        detailOutcome: ""
       },
       tahunan: {
-        badge: "Tahunan",
-        title: "Annual Gathering & MOU",
-        schedule: "Setiap Tahun",
-        desc: "Setiap tahun, VIS menggelar pertemuan akbar bagi seluruh anggota dengan mengundang mitra strategis serta narasumber lintas negara atau skala Internasional."
+        badge: "Semesteran / Tahunan",
+        title: "Forum Semesteran / Tahunan — Terhubung di Level Lebih Tinggi",
+        schedule: "Setiap 6 atau 12 Bulan",
+        desc: "Forum semesteran atau tahunan kami menyediakan wadah yang lebih formal untuk diskusi dan keterlibatan yang lebih luas.",
+        detailTitle: "Forum Semesteran / Tahunan — Terhubung di Level Lebih Tinggi",
+        detailFocus: "Biasanya diselenggarakan di lokasi representatif seperti ballroom hotel, acara ini dapat berbentuk diskusi panel dengan pembicara dari institusi pemerintah, pemimpin bisnis senior, pakar nasional, atau perwakilan dari negara-negara tetangga.",
+        detailFormat: "",
+        detailOutcome: ""
       },
-      detailBtn: "Detail Kegiatan"
+      detailBtn: "Detail Kegiatan",
+      closeDetailBtn: "Tutup Detail"
     },
     membership: {
       label: "VIS Society Membership",
@@ -266,23 +279,36 @@ export const translations = {
       desc: "A series of regular meetings and programs designed to strengthen connections, share tactical knowledge, and open pathways for regional collaboration.",
       monthly: {
         badge: "Monthly",
-        title: "Monthly Meeting",
-        schedule: "Regularly Every Month",
-        desc: "Monthly meetings are conducted regularly by inviting all VIS members as well as sympathizers or potential members to build initial networks."
+        title: "Monthly Meetings — Connect & Exchange",
+        schedule: "Every Month",
+        desc: "Our monthly meetings are informal gatherings held at different cafés across Batam.",
+        detailTitle: "Monthly Meetings — Connect & Exchange",
+        detailFocus: "Members are encouraged to bring their business associates, professional contacts, or other relevant guests, creating an open environment for networking and relationship building.",
+        detailFormat: "Each meeting typically includes:\n\n- Introduction to VIS Society\n- Knowledge sharing from VIS members\n- Networking and informal discussion\n- Updates on upcoming VIS programmes and activities",
+        detailOutcome: "It is a simple way to stay connected, meet new people, and discover opportunities within the VIS ecosystem."
       },
       triwulan: {
-        badge: "Quarterly",
-        title: "Thematic & Expert Meeting",
-        schedule: "Every 3 Months",
-        desc: "Every 3 months, the VIS meeting event will present special speakers, both from government circles and experts in certain business fields to share deep insights."
+        badge: "Quarterly / Semi-Annual",
+        title: "Quarterly / Semi-Annual Meetings — Learn & Engage",
+        schedule: "Every 3 or 6 Months",
+        desc: "Our quarterly or semi-annual meetings build upon the monthly gathering format, with a stronger focus on knowledge and strategic insight.",
+        detailTitle: "Quarterly / Semi-Annual Meetings — Learn & Engage",
+        detailFocus: "For these sessions, VIS invites guest speakers from relevant government institutions, experienced business leaders, or other distinguished professionals to share their perspectives and experience.",
+        detailFormat: "These sessions provide members with an opportunity to learn directly from people with practical experience and engage in meaningful discussion.",
+        detailOutcome: ""
       },
       tahunan: {
-        badge: "Annual",
-        title: "Annual Gathering & MOU",
-        schedule: "Every Year",
-        desc: "Every year, VIS holds a grand gathering for all members by inviting strategic partners as well as cross-border or scale International speakers."
+        badge: "Semi-Annual / Annual",
+        title: "Semi-Annual / Annual Forums — Connect at a Higher Level",
+        schedule: "Every 6 or 12 Months",
+        desc: "Our semi-annual or annual forums provide a more formal platform for broader discussion and engagement.",
+        detailTitle: "Semi-Annual / Annual Forums — Connect at a Higher Level",
+        detailFocus: "Usually held at a representative venue such as a hotel ballroom, these events may take the form of panel discussions featuring speakers from government institutions, senior business leaders, national experts, or representatives from neighbouring countries.",
+        detailFormat: "",
+        detailOutcome: ""
       },
-      detailBtn: "Event Details"
+      detailBtn: "Event Details",
+      closeDetailBtn: "Close Details"
     },
     membership: {
       label: "VIS Society Membership",
@@ -410,10 +436,10 @@ export type TranslationKey =
   | "about.org.roleKetuaUmum" | "about.org.roleCoFounder" | "about.org.roleKetuaHarian"
   | "about.partners.label" | "about.partners.heading" | "about.partners.desc"
   | "program.label" | "program.heading" | "program.desc"
-  | "program.monthly.badge" | "program.monthly.title" | "program.monthly.schedule" | "program.monthly.desc"
-  | "program.triwulan.badge" | "program.triwulan.title" | "program.triwulan.schedule" | "program.triwulan.desc"
-  | "program.tahunan.badge" | "program.tahunan.title" | "program.tahunan.schedule" | "program.tahunan.desc"
-  | "program.detailBtn"
+  | "program.monthly.badge" | "program.monthly.title" | "program.monthly.schedule" | "program.monthly.desc" | "program.monthly.detailTitle" | "program.monthly.detailFocus" | "program.monthly.detailFormat" | "program.monthly.detailOutcome"
+  | "program.triwulan.badge" | "program.triwulan.title" | "program.triwulan.schedule" | "program.triwulan.desc" | "program.triwulan.detailTitle" | "program.triwulan.detailFocus" | "program.triwulan.detailFormat" | "program.triwulan.detailOutcome"
+  | "program.tahunan.badge" | "program.tahunan.title" | "program.tahunan.schedule" | "program.tahunan.desc" | "program.tahunan.detailTitle" | "program.tahunan.detailFocus" | "program.tahunan.detailFormat" | "program.tahunan.detailOutcome"
+  | "program.detailBtn" | "program.closeDetailBtn"
   | "membership.label" | "membership.heading" | "membership.desc"
   | "membership.stats.members" | "membership.stats.countries" | "membership.stats.validity"
   | "membership.selectedLabel" | "membership.ctaBtn" | "membership.benefitTitle" | "membership.benefitDesc"

@@ -38,9 +38,10 @@ export default function Home() {
               <Image
                 src="/img/vis_logo.png"
                 alt={SITE_NAME}
-                width={80}
-                height={80}
-                className="h-20 w-auto mb-4 brightness-0 invert"
+                width={278}
+                height={144}
+                sizes="(max-width: 768px) 160px, 220px"
+                className="mb-4 h-auto w-40 md:w-52 brightness-0 invert"
                 quality={100}
                 priority
               />
@@ -92,7 +93,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:growthwithvis@gmail.com" className="hover:text-white transition-colors">
+                  <a href="mailto:info@vissociety.org?cc=growthwithvis@gmail.com" className="hover:text-white transition-colors">
                     info@vissociety.org
                   </a>
                 </li>
