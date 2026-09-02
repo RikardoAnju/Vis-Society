@@ -97,11 +97,7 @@ export default function Home() {
                     info@vissociety.org
                   </a>
                 </li>
-                <li>
-                  <a href="https://www.instagram.com/vis.society/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                    @vis.society
-                  </a>
-                </li>
+                
               </ul>
             </ScrollReveal>
 
