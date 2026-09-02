@@ -1,9 +1,4 @@
-/**
- * Program cards.
- *
- * Render-only data for the Programs section: image + alt here, i18n keys for the
- * translated text.
- */
+
 
 import type { TranslationKey } from "@constants/translations";
 

@@ -1,9 +1,4 @@
-/**
- * Testimonials.
- *
- * Render-only data for the Testimonials section: avatar initials + colour here,
- * i18n keys for the translated text.
- */
+
 
 import type { TranslationKey } from "@constants/translations";
 
