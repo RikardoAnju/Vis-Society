@@ -220,15 +220,16 @@ export default function AboutSection() {
             </p>
           </ScrollReveal>
 
-          {/* Org Tree Visualization */}
-          <div className="flex flex-col items-center">
+          {/* Keep the organization chart compact on small screens without stacking every role. */}
+          <div className="-mx-4 overflow-x-auto px-4 pb-4 md:mx-0 md:overflow-visible md:px-0">
+            <div className="min-w-[980px] md:min-w-0 flex flex-col items-center">
             {/* Top Leadership - Founder with Co-founders on left/right */}
             <div className="relative w-full mb-8 flex justify-center">
-              {/* Horizontal connector line on desktop - only between the circles */}
-              <div className="absolute top-16 h-px hidden md:block" style={{ backgroundColor: connectorColor, width: 'calc(100% - 160px)', maxWidth: '560px' }}></div>
+              {/* Horizontal connector line between the leadership roles. */}
+              <div className="absolute top-16 h-px" style={{ backgroundColor: connectorColor, width: 'calc(100% - 160px)', maxWidth: '560px' }}></div>
 
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full relative">
-                {/* Co-Founders and Ketua Umum in same row on desktop */}
+              <div className="flex flex-row items-center justify-center gap-8 w-full relative">
+                {/* Co-Founders and Ketua Umum stay in one row inside the mobile chart. */}
                 <ScrollReveal animation="slide-up" delay={100} className="flex flex-col items-center relative z-10">
                   {/* First Co-Founder */}
                   <div className={`${leadership.coFounders[0].cardWidth} flex flex-col items-center text-center transition-transform hover:scale-[1.02] duration-300`}>
@@ -316,15 +317,15 @@ export default function AboutSection() {
 
             {/* Departments Row */}
             <div className="w-full relative mt-2">
-              {/* Horizontal Line connecting columns on desktop */}
-              <div className="absolute top-0 left-[10%] right-[10%] h-px hidden md:block" style={{ backgroundColor: connectorColor }}></div>
+              {/* Horizontal line connecting department columns. */}
+              <div className="absolute top-0 left-[10%] right-[10%] h-px" style={{ backgroundColor: connectorColor }}></div>
 
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 justify-items-center relative">
+              <div className="grid grid-cols-5 gap-4 justify-items-center relative">
                 {departments.map((dept, idx) => (
                   <ScrollReveal key={idx} animation="slide-up" delay={idx * 100 + 100} className="w-full max-w-[290px] md:max-w-none flex flex-col items-center">
                     <div className="px-4 py-2 md:p-0 w-full flex flex-col items-center">
-                      {/* Vertical line from connector to department head on desktop */}
-                      <div className="w-px h-6 hidden md:block" style={{ backgroundColor: connectorColor }}></div>
+                      {/* Vertical line from the department connector to its head. */}
+                      <div className="w-px h-6" style={{ backgroundColor: connectorColor }}></div>
 
                       {/* Department Header/Title */}
                       <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-3 md:mt-2 text-center">
@@ -369,6 +370,7 @@ export default function AboutSection() {
                   </ScrollReveal>
                 ))}
               </div>
+            </div>
             </div>
           </div>
         </div>
