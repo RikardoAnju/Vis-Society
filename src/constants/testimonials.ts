@@ -15,14 +15,14 @@ export const TESTIMONIALS: TestimonialContent[] = [
     nameKey: "testimonials.t1.name",
     roleKey: "testimonials.t1.role",
     textKey: "testimonials.t1.text",
-    initials: "LJ",
+    initials: "PR",
     color: "#053f5c",
   },
   {
     nameKey: "testimonials.t2.name",
     roleKey: "testimonials.t2.role",
     textKey: "testimonials.t2.text",
-    initials: "SL",
+    initials: "SD",
     color: "#a5dded",
   },
   {

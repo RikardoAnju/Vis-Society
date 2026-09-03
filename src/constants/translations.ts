@@ -157,14 +157,14 @@ export const translations = {
       heading: "Apa Kata Anggota & Mitra Kami",
       desc: "Dengarkan pengalaman langsung dari para mitra internasional dan anggota yang bertumbuh bersama ekosistem VIS Society.",
       t1: {
-        name: "Lee Jin-woo",
-        role: "CEO Aiving (Korea Selatan)",
-        text: "Bermitra dengan VIS Society membuka jalur kolaborasi AI yang sangat produktif di Asia Tenggara. Komunitas ini diisi oleh para pemimpin bisnis yang memiliki visi pertumbuhan yang sangat kuat."
+        name: "Priyo",
+        role: "Marketing Staff Altrak 78",
+        text: "Belum sampai setahun bergabung dengan VIS, saya sudah mendapatkan PO dari sesama member VIS. VIS benar-benar network yang berkualitas."
       },
       t2: {
-        name: "Sarah Lim",
-        role: "Managing Director Match Advisory (Singapura)",
-        text: "VIS Society memberikan wadah networking yang sangat nyata dan tepercaya. Lewat ekosistem 'Aquarium' mereka, kami bisa berinteraksi dengan mitra di Batam secara langsung dan aman."
+        name: "Sandedex",
+        role: "Wurth Indonesia",
+        text: "Saya sudah bergabung dengan berbagai organisasi, tapi hanya VIS Society yang saya lihat konsisten dalam menjalankan programnya secara rutin. Selain itu, program sharing knowledge dari VIS juga membuat wawasan saya dalam hal bisnis terus bertumbuh."
       },
       t3: {
         name: "Hendry Wijaya",
@@ -367,14 +367,14 @@ export const translations = {
       heading: "What Our Members & Partners Say",
       desc: "Hear directly from international partners and members growing together with the VIS Society ecosystem.",
       t1: {
-        name: "Lee Jin-woo",
-        role: "CEO of Aiving (South Korea)",
-        text: "Partnering with VIS Society opened up a highly productive AI collaboration channel in Southeast Asia. This community is filled with business leaders who have a very strong growth vision."
+        name: "Priyo",
+        role: "Marketing Staff at Altrak 78",
+        text: "In less than a year of joining VIS, I have already received a purchase order from a fellow VIS member. VIS is truly a quality network."
       },
       t2: {
-        name: "Sarah Lim",
-        role: "Managing Director of Match Advisory (Singapore)",
-        text: "VIS Society provides a very real and trusted networking platform. Through their 'Aquarium' ecosystem, we can interact with partners in Batam directly and securely."
+        name: "Sandedex",
+        role: "Wurth Indonesia",
+        text: "I have joined various organizations, but VIS Society is the only one I have seen consistently running its programs regularly. VIS's knowledge-sharing programs have also continued to grow my business insight."
       },
       t3: {
         name: "Hendry Wijaya",
