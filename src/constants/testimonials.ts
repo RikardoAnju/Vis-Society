@@ -29,7 +29,7 @@ export const TESTIMONIALS: TestimonialContent[] = [
     nameKey: "testimonials.t3.name",
     roleKey: "testimonials.t3.role",
     textKey: "testimonials.t3.text",
-    initials: "A",
+    initials: "MA",
     color: "#f1f5f9",
   },
 ];

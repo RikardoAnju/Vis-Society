@@ -53,7 +53,7 @@ export const PROGRAMS: ProgramContent[] = [
     detailFocusKey: "program.tahunan.detailFocus",
     detailFormatKey: "program.tahunan.detailFormat",
     detailOutcomeKey: "program.tahunan.detailOutcome",
-    image: "/img/semiannual-annual-forum.webp",
-    alt: "Forum VIS Society dengan pembicara dan peserta acara",
+    image: "/img/FOTO MOU/mou-01.webp",
+    alt: "Penandatanganan kerja sama VIS Society",
   },
 ];

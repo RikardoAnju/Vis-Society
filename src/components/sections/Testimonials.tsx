@@ -63,9 +63,11 @@ export default function TestimonialsSection() {
                   <h4 className="font-bold text-sm md:text-base text-black leading-tight">
                     {t(item.nameKey)}
                   </h4>
-                  <p className="text-xs text-gray-500 mt-1">
-                    {t(item.roleKey)}
-                  </p>
+                  {t(item.roleKey) && (
+                    <p className="text-xs text-gray-500 mt-1">
+                      {t(item.roleKey)}
+                    </p>
+                  )}
                 </div>
               </div>
             </ScrollReveal>
