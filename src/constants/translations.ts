@@ -167,9 +167,9 @@ export const translations = {
         text: "Saya sudah bergabung dengan berbagai organisasi, tapi hanya VIS Society yang saya lihat konsisten dalam menjalankan programnya secara rutin. Selain itu, program sharing knowledge dari VIS juga membuat wawasan saya dalam hal bisnis terus bertumbuh."
       },
       t3: {
-        name: "Hendry Wijaya",
-        role: "Founder Batam Logistik Utama",
-        text: "Sebagai pengusaha di Batam, VIS Society membantu saya memperluas wawasan dan peluang bisnis hingga ke Singapura dan Malaysia. Diskusi bulanan mereka selalu memberikan insight praktis."
+        name: "Andre",
+        role: "Match Advisory",
+        text: "VIS Society dipenuhi oleh para entrepreneur Batam yang penuh semangat dan memiliki jaringan yang kuat. Saya terkesan dengan dedikasi mereka untuk kemajuan Batam. Saya merasa terhormat menjadi salah satu mitra strategis mereka dan yakin akan ada banyak kegiatan serta kolaborasi positif dan konstruktif antara VIS Society dan Match Advisory ke depan."
       }
     },
     blog: {
@@ -377,9 +377,9 @@ export const translations = {
         text: "I have joined various organizations, but VIS Society is the only one I have seen consistently running its programs regularly. VIS's knowledge-sharing programs have also continued to grow my business insight."
       },
       t3: {
-        name: "Hendry Wijaya",
-        role: "Founder of Batam Logistik Utama",
-        text: "As an entrepreneur in Batam, VIS Society helped me expand my horizons and business opportunities to Singapore and Malaysia. Their monthly discussions always provide practical insights."
+        name: "Andre",
+        role: "Match Advisory",
+        text: "VIS Society is filled with passionate and well-connected entrepreneurs from Batam. I am impressed by their dedication to improving Batam. I am honoured to be one of their strategic collaborators, and I am certain that there will be many positive and constructive events and collaborations between VIS Society and Match Advisory ahead."
       }
     },
     blog: {
