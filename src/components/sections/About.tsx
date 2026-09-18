@@ -7,6 +7,7 @@ import AnimatedCounter from "@components/ui/AnimatedCounter";
 import ScrollReveal from "@components/ui/ScrollReveal";
 import { useLanguage } from "@lib/LanguageContext";
 import { TranslationKey } from "@constants/translations";
+import { useEffect, useRef } from "react";
 
 const ORG_DEPARTMENTS = (t: (key: TranslationKey) => string) => [
   {
@@ -88,6 +89,21 @@ export default function AboutSection() {
   const departments = ORG_DEPARTMENTS(t);
   const leadership = LEADERSHIP_TEAM(t);
   const connectorColor = "#cbd5e1";
+
+  const orgChartScrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = orgChartScrollRef.current;
+
+    if (!container) return;
+
+    const scrollToCenter = () => {
+      container.scrollLeft =
+        (container.scrollWidth - container.clientWidth) / 2;
+    };
+
+    scrollToCenter();
+  }, []);  
 
   return (
     <section id="about" className="py-16 md:py-24 px-4 md:px-8 bg-white">
@@ -221,7 +237,7 @@ export default function AboutSection() {
           </ScrollReveal>
 
           {/* Keep the organization chart compact on small screens without stacking every role. */}
-          <div className="-mx-4 overflow-x-auto px-4 pb-4 md:mx-0 md:overflow-visible md:px-0">
+          <div ref={orgChartScrollRef} className="-mx-4 overflow-x-auto px-4 pb-4 md:mx-0 md:overflow-visible md:px-0">
             <div className="min-w-[980px] md:min-w-0 flex flex-col items-center">
             {/* Top Leadership - Founder with Co-founders on left/right */}
             <div className="relative w-full mb-8 flex justify-center">
@@ -398,13 +414,13 @@ export default function AboutSection() {
                   alt="Aiving Partner Logo"
                   width={120}
                   height={120}
-                  className="max-h-12 md:max-h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                  className="max-h-16 md:max-h-24 w-auto object-contain transition-all duration-300 group-hover:scale-105"
                   priority
                 />
               </div>
             </ScrollReveal>
 
-            {/* Partner 2: Match Advisory */}
+            {/* Partner 2: Match Advisory
             <ScrollReveal animation="scale-up" delay={250}>
               <div className="group flex items-center justify-center p-3 md:p-6 bg-slate-50/50 rounded-2xl border border-slate-100 hover:border-slate-200 transition-all duration-300 w-36 h-20 md:w-52 md:h-28 hover:bg-white hover:shadow-lg hover:shadow-slate-200/50">
                 <Image
@@ -416,7 +432,7 @@ export default function AboutSection() {
                   priority
                 />
               </div>
-            </ScrollReveal>
+            </ScrollReveal> */}
           </div>
         </div>
 
